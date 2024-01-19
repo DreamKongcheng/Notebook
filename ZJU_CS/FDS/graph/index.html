@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>图论 - 我的第一个站点</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">我的第一个站点</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ZJU CS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">ZJU CS 课程</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DigitalDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../DigitalDesign/" class="dropdown-item">[大二秋冬] 数字逻辑设计 | Digital Design</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap01/" class="dropdown-item">Chap 1 Digital Systems and Information</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap02/" class="dropdown-item">Chap 2 Combinational Logic Circuits</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap03/" class="dropdown-item">Chap 3 Combinational Logic Design</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap04/" class="dropdown-item">Chap 4 Sequential Circuits</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap05/" class="dropdown-item">Chap 5 Digital Hardware Implementation</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap06/" class="dropdown-item">Chap 6 Registers & Register Transfers</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap07/" class="dropdown-item">Chap 7 Memory Basics</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/glossary/" class="dropdown-item">词汇表</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/learnskill/" class="dropdown-item">学习思路以及资源</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Discrete math</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Discrete%20math/" class="dropdown-item">离散数学</a>
+</li>
+            
+<li>
+    <a href="../../Discrete%20math/note/" class="dropdown-item">摘要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">FDS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../algorithm/" class="dropdown-item">算法分析</a>
+</li>
+            
+<li>
+    <a href="../exam/" class="dropdown-item">历年卷</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">图论</a>
+</li>
+            
+<li>
+    <a href="../hash/" class="dropdown-item">散列（哈希）</a>
+</li>
+            
+<li>
+    <a href="../heap/" class="dropdown-item">优先队列（堆）</a>
+</li>
+            
+<li>
+    <a href="../homework/" class="dropdown-item">作业要点</a>
+</li>
+            
+<li>
+    <a href="../set/" class="dropdown-item">并查集</a>
+</li>
+            
+<li>
+    <a href="../sort/" class="dropdown-item">排序</a>
+</li>
+            
+<li>
+    <a href="../tree/" class="dropdown-item">树</a>
+</li>
+            
+<li>
+    <a href="../%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/" class="dropdown-item">数组与链表</a>
+</li>
+            
+<li>
+    <a href="../%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="dropdown-item">栈和队列</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">HPC</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/" class="dropdown-item">ZJUSCT</a>
+</li>
+            
+<li>
+    <a href="../../HPC/AIPP/" class="dropdown-item">并行计算设计导论</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Class</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/class/" class="dropdown-item">note of class</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L1/" class="dropdown-item">7月4日 计算机体系结构和高性能计算基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L2/" class="dropdown-item">7月5日 高性能计算方法论（HPC）</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L3/" class="dropdown-item">7月6日 集群软硬件以及运维基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L4/" class="dropdown-item">7月8日 向量化并行计算基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L5/" class="dropdown-item">7月9日 GPU (Graphic Processing Unit)</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L6/" class="dropdown-item">7月10日 OpenMP</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L7/" class="dropdown-item">7月11号 机器学习（Machine Learning)</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L8/" class="dropdown-item">高性能计算高级话术</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Homework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/homework/lab1/" class="dropdown-item">Lab-1</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab2.5/" class="dropdown-item">Lab-2</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab2/" class="dropdown-item">Lab2 向量化计算</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab3/" class="dropdown-item">Lab-3 基于CUDA对GEMM的优化</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab4/" class="dropdown-item">Lab-4 PCG算法在OMP和MPI下的优化</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab5/" class="dropdown-item">Lab-5 AI相关</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../exam/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../hash/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">图论</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">定义</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">图的表示</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">拓扑排序</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_8" class="nav-link">最短路</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">最大流</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_14" class="nav-link">最小生成树</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">图论</h1>
+<h2 id="_2">定义</h2>
+<ul>
+<li>
+<p>一个图 $G=(V,E)$ 其中 $V$ 是节点的有限非空集合, $E$ 是边的有限非空集合. 每一条边就是一个点对 $(v,w)$.  </p>
+<ul>
+<li>无向图: $(v_i,v_j)=(v_j,v_i)$ 表示同一条边</li>
+<li>有向图: $(v_i,v_j)\neq (v_j,v_i)$ 其中 $(v_i,v_j)$ 表示由 $v_i$ (tail) 指向 $v_j$ (head) 的一条边。</li>
+<li>限制：自环是不合法的，同时我们不考虑多重图 </li>
+<li>对于 $(v_i,v_j)$ 这条边，我们称 $v_i,v_j$ 是邻接的(adjacent), 称 $(v_i,v_j)$ 附属于(incident) $v_i/v_j$</li>
+<li><strong>完全图</strong>: 每一对节点间都存在一条边的图  </li>
+<li><strong>子图</strong>: $G'\sub G$ 即 $G'$ 中的点和边都包含在 G 中($V(G')\sube V(G)\quad E(G')\sube E(G)$)  </li>
+<li><strong>路径</strong>: ${v_p,v_{i1},v_{i2},\ldots, v_{in},v_q}((v_i,v_i)\in E)$ 称为从 $v_p$ 到 $v_q$ 的一条路径</li>
+<li><strong>路径的长度</strong>：路径经过的边的数量</li>
+<li><strong>简单路径</strong>: $v_{i1},v_{i2}...$ 各不相同(注意第一个点可以和最后一个点相同)</li>
+<li><strong>圈</strong>: $v_p=v_q$ 的简单路径</li>
+<li>如果一个无向图中每一个顶点到另一个其他顶点都存在一条路径，那么无向图是<strong>连通</strong>的。具有这样性质的有向图称为<strong>强连通</strong>。如果有向图不是强连通，但他的<strong>基础图</strong>（边去掉方向所形成的图）是连通的，那么称为<strong>弱联通</strong>。</li>
+<li><strong>DAG</strong>: Directed Acyclic Graph(有向无环图)，树是连通的有向无环图  </li>
+<li><strong>度数</strong>: 附属于 $v$ 的边的数量。对于一个有向图，还分为出度和入度。给一个 $n$ 个节点的图 $G$, 我们有 $e=\dfrac{\sum\limits_{i=0}^{n-1}d_i}{2}$ （其中 $d_i=degree(v_i)$</li>
+</ul>
+</li>
+</ul>
+<h2 id="_3">图的表示</h2>
+<h3 id="_4">邻接矩阵</h3>
+<p>$$
+adj_mat[i][j]=\left{ \begin{matrix} 1\quad if\ (v_i,v_j)\ or\ <v_i,v_j>\in E(G)\ 0\quad \quad \quad \quad \quad \quad  \quad \quad \quad \ \ \ otherwise \end{matrix} \right.
+$$</p>
+<p>如果 $G$ 是无向图，那么邻接矩阵是对称的，因此我们可以只存一半的数据。</p>
+<p>$deg(i)=\sum\limits_{j=0}^{n-1}adj_mat[i][j]+\sum\limits_{j=0}^{n-1}adj_mat[j][i]$</p>
+<p>但这样的空间需求是 $\Theta(|V|^2)$, 对于非稠密图开销太大。</p>
+<h3 id="_5">邻接表</h3>
+<p>对每一个顶点，我们使用一个链表存放其所有邻接的顶点，此时的空间需求为 $O(|E|+|V|)$</p>
+<p>在无向图上，每条边 $(u,v)$ 出现在两个表中，因此空间的使用是双倍的，$S=n\ heads + 2e\ edges $</p>
+<p>在无向图中，$v$ 的度数就是 $graph[v]$ 中的节点个数。如果 $G$ 是 有向图，这样只能找到出度，对于入度，我们有两种方法:</p>
+<ul>
+<li>增加一个链表，将边反向并存入 </li>
+<li>使用多重表</li>
+</ul>
+<h3 id="_6">邻接多重表列</h3>
+<h2 id="_7">拓扑排序</h2>
+<ul>
+<li>AOV 网络：有向图中，用顶点表示活动，用弧表示活动之间的优先关系</li>
+<li>在有向图中，我们称 $i$ 是 $j$ 的<strong>前驱</strong>，如果存在一条从 $i$ 到 $j$ 的路径  </li>
+<li>我们称 $i$ 是 $j$ 的<strong>直接前驱</strong>，如果 $<i,j>\in E(G)$. 同时 $j$ 称为 $i$ 的<strong>直接后继</strong></li>
+</ul>
+<p>可实现的 AOV 网络一定是 DAG.  </p>
+<blockquote>
+<p><strong>拓扑排序</strong>是对有向无环图的顶点的一种排序，它使得如果 $i$ 是 $j$ 的前驱，那么在拓扑序列中 $i$ 一定出现在 $j$ 的前面。</p>
+</blockquote>
+<p>实现思路：在容器中（队列/栈）放未被排序且度数为 0 的节点</p>
+<details>
+
+<pre><code class="language-C">void Topsort( Graph G )
+{   Queue  Q;
+    int  Counter = 0;
+    Vertex  V, W;
+    Q = CreateQueue( NumVertex );  MakeEmpty( Q );
+    for ( each vertex V )
+    if ( Indegree[ V ] == 0 )   Enqueue( V, Q );
+    while ( !IsEmpty( Q ) ) {
+    V = Dequeue( Q );
+    TopNum[ V ] = ++ Counter; /* assign next */
+    for ( each W adjacent to V )
+        if ( – – Indegree[ W ] == 0 )  Enqueue( W, Q );
+    }  /* end-while */
+    if ( Counter != NumVertex )
+    Error( “Graph has a cycle” );
+    DisposeQueue( Q ); /* free memory */
+}
+</code></pre>
+
+</details>
+
+<p>!!! Note
+    拓扑排序可能不是唯一的</p>
+<h2 id="_8">最短路</h2>
+<p>给定有向图 $G=(V,E)$ 以及一个花费函数 $c(e), e\in E(G)$. 从源点到终点的一条路径 $P$ 的长度定义为 $\sum\limits_{e_i\sub P}c(e_i)$ （也称为带权路径长） </p>
+<h3 id="_9">单源最短路径</h3>
+<p>给定一个赋权图和一个特定顶点 $s$ 作为输入，找出从 $s$ 到 $G$ 中每一个其他顶点的最短带权路径。
+<strong>注意</strong>: 如果这里有负环，那么最短路径定义为 0. </p>
+<h4 id="_10">无权最短路径</h4>
+<p>采用 BFS(Breadth-First Search) 的方式，从 $s$ 出发寻找所有距离为 1 的顶点(即与 $s$ 邻接)随后寻找与 $s$ 距离为 2 的顶点，即与刚刚那些顶点邻接的顶点，以此类推。</p>
+<details>
+
+
+<pre><code class="language-C">void Unweighted( Table T )
+{   /* T is initialized with the source vertex S given */
+    Queue  Q;
+    Vertex  V, W;
+    Q = CreateQueue (NumVertex );  MakeEmpty( Q );
+    Enqueue( S, Q ); /* Enqueue the source vertex */
+    while ( !IsEmpty( Q ) ) {
+        V = Dequeue( Q );
+        T[ V ].Known = true; /* not really necessary */
+        for ( each W adjacent to V )
+    if ( T[ W ].Dist == Infinity ) {
+        T[ W ].Dist = T[ V ].Dist + 1;
+        T[ W ].Path = V;
+        Enqueue( W, Q );
+    } /* end-if Dist == Infinity */
+    } /* end-while */
+    DisposeQueue( Q ); /* free memory */
+}
+</code></pre>
+
+</details>
+
+<h4 id="dijkstra">Dijkstra 算法</h4>
+<p>令 S 表示源点 s 以及其他已经找到最短路的节点的集合，对于不在 S 集合中的节点 u, 我们定义 $dist[u]$ 表示最短的路径长度，其中路径是从 $s\rightarrow v_i\rightarrow u(v_i\in S)$. 如果路径是非降序生成的，那么</p>
+<ul>
+<li>最短路径一定是从 $S$ 中的某个点 $v_i$ 到 $u$.  </li>
+<li>$dist[u]=\min{w\notin S\ |\ dist[w]}$. 即我们从 $S$ 之外的节点中选择 $dist[u]$ 最小的作为下一个 $u$.  </li>
+<li>如果 $dist[u_1]&lt;dist[u_2]$ 同时我们将 $u_1$ 加入了 $S$, 那么 $dist[u_2]$ 可能会改变，如果改变了，那么 $dist[u_2]=dist[u_1]+length<u_1,u_2>$.  </li>
+</ul>
+<details>
+
+<pre><code class="language-C">void Dijkstra( Table T )
+{   /* T is initialized by Figure 9.30 on p.303 */
+    Vertex  V, W;
+    for ( ; ; ) { /* O( |V| ) */
+        V = smallest unknown distance vertex;
+        if ( V == NotAVertex )
+    break; 
+        T[ V ].Known = true;
+        for ( each W adjacent to V )
+    if ( !T[ W ].Known ) 
+        if ( T[ V ].Dist + Cvw &lt; T[ W ].Dist ) {
+            Decrease( T[ W ].Dist  to
+             T[ V ].Dist + Cvw );
+        T[ W ].Path = V;
+        } /* end-if update W */
+    } /* end-for( ; ; ) */
+}
+/* not work for edge with negative cost  */
+</code></pre>
+
+</details>
+
+<p>总的运行时间 $O(|E|+|V|^2)$ </p>
+<p>具体实现:</p>
+<ul>
+<li>通过扫描整个表来找到 smallest unknown distance vertex - $O(|V|^2+|E|)$ （当图是稠密的时候，这种方法是好的）</li>
+<li>使用堆。首先我们 <code>DeleteMin</code>, 随后可以 <code>DecreaseKey</code> 来进行更新，这样我们需要记录 $d_i$ 的值在堆中的位置，当堆发生变化时我们也需要更新；另一种方式是在每次更新后将 $w$ 和新值 $d_w$ 插入堆，这样堆中可能有同一顶点的多个代表。当删除最小值的时候需要检查这个点是不是已经知道的。</li>
+</ul>
+<h4 id="_11">负权边的图</h4>
+<details>
+
+<pre><code class="language-C">void  WeightedNegative( Table T )
+{   /* T is initialized by Figure 9.30 on p.303 */
+    Queue  Q;
+    Vertex  V, W;
+    Q = CreateQueue (NumVertex );  MakeEmpty( Q );
+    Enqueue( S, Q ); /* Enqueue the source vertex */
+    while ( !IsEmpty( Q ) ) { /* each vertex can dequeue at most |V| times */
+        V = Dequeue( Q );
+        for ( each W adjacent to V )
+    if ( T[ V ].Dist + Cvw &lt; T[ W ].Dist ) {
+        T[ W ].Dist = T[ V ].Dist + Cvw;
+        T[ W ].Path = V;
+        if ( W is not already in Q )
+            Enqueue( W, Q );
+    } /* end-if update */
+    } /* end-while */
+    DisposeQueue( Q ); /* free memory */
+}
+/* negative-cost cycle will cause indefinite loop */
+</code></pre>
+
+</details>
+
+<h4 id="_12">无圈图</h4>
+<p>如果图是无圈的，我们以拓扑序选择节点来改进算法。当选择一个顶点后，按照拓扑序他没有从未知顶点发出的进入边，因此他的距离不可能再降低，算法得以一次完成。</p>
+<p>$T=O(|V|+|E|)$ 而且不需要堆</p>
+<p>应用：AOE (Activity On Edge) 网络</p>
+<p>!!! Info
+    digraph: 有向图
+    Multigraph: 多重图，即有重边的图 <br />
+    cycle: 圈 <br />
+    underlying graph: 基础图  <br />
+    Adjacency Matrix: 邻接矩阵  <br />
+    Adjacency Lists: 邻接表<br />
+    Adjacency Multilists: 邻接多重表列  </p>
+<h2 id="_13">最大流</h2>
+<p><img alt="image.png|750" src="https://imagebed-1321832893.cos.ap-shanghai.myqcloud.com/ImageBed/202311280856152.png" /></p>
+<p>残差网络
+在逻辑上允许水回传   逻辑与物理区分    撤销操作
+有环的情况依然可以用
+当逻辑上的路径与物理上的路径都用完了以后那就是结束了</p>
+<h2 id="_14">最小生成树</h2>
+<p><a href="https://blog.csdn.net/the_ZED/article/details/105938353?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170531887516800211526892%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=170531887516800211526892&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-2-105938353-null-null.142^v99^pc_search_result_base9&amp;utm_term=%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91&amp;spm=1018.2226.3001.4187">最小生成树</a></p>
+<p>最小生成树（英语：Minimum spanning tree，简称MST）是最小权重生成树（英语：Minimum weight spanning tree）的简称，是一副连通加权无向图中一棵权值最小的生成树。</p>
+<p>在一给定的无向图 $G=(V,E)$ 中, $(u,v)$ 代表连接顶点 u 与顶点 v 的边, 而 $w(u,v)$ 代表此边的权重，若存在 T 为 E 的子集(即 $T \subseteq  E$ ) 且 (V, T) 为树，使得：
+$$
+w(T) = \sum_{(u,v) \in T}{w(u,v)}
+$$
+的 w(T) 最小，则此 T 为 G 的最小生成树。</p>
+<p><strong>一个graph有生成树，当且仅当它是连通图</strong></p>
+<h4 id="prim">Prim算法</h4>
+<p>个人认为这个算法和<code>dijkstra</code>有非常相似的地方，倘若你已经彻底理解<code>dijkstra</code>算法的话，相信你一定能很快洞悉其中的道理。</p>
+<p>该算法的描述如下：</p>
+<ol>
+<li>输入：一个加权连通图，其中顶点集合为V，边集合为E；</li>
+<li>初始化：定义存放当前已走点的集合Vnew = {x}，其中x为集合V中的任意节点（作为起始点），定义存放当前已走边的集合Enew = { }，为空；</li>
+<li>重复下列操作，直到 Vnew = V：
+① 在集合E中选取权值最小的边<u, v>，其中u为集合Vnew中的元素，而v不在Vnew集合当中，并且v∈V（如果存在有多条满足前述条件即具有相同权值的边，则可任意选取其中之一）；
+② 将v加入集合Vnew中，将<u, v>边加入集合Enew中；</li>
+<li>输出：使用集合Vnew和Enew来描述所得到的最小生成树</li>
+</ol>
+<p>都有一个已知集合S，都是不断往这个S集合里面添加新的点</p>
+<p>唯一的区别就是prim不是对dist累加，而是把新的权边和原有权边作对比，取最小的</p>
+<h4 id="kruskal">Kruskal算法</h4>
+<p>与Prim算法将点设为对象不同，Kruskal算法是将边设为对象 —— 将所有边从小到大排序，依次加入到生成树当中。</p>
+<p>Kruskal（克鲁斯卡尔）算法是一种巧妙利用并查集来求最小生成树的算法。</p>
+<p>该算法的描述如下：</p>
+<ol>
+<li>设无向连通图Graph有v个顶点，e条边；</li>
+<li>新建图Graphnew，Graphnew拥有与原图中相同的v个顶点，但没有边；</li>
+<li>将原图Graph中所有边按权值从小到大排序；</li>
+<li>进入一层循环，该循环从权值最小的边开始遍历每条边，直至图Graphnew中所有的节点都在同一个连通分量中。循环体内的内容如下：
+if（这条边连接的两个节点于图Graphnew中不在同一个连通分量中） 则添加这条边到图Graphnew中；</li>
+</ol>
+<p>!!!
+    稀疏图一般选择 prim,采用 邻接矩阵 进行存储边之间的关系。
+    稠密图一般选择 Kruskal ,采用邻接表进行存储边之间的关系(更多采用结构体的方式)。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

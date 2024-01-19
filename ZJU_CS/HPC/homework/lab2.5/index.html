@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Lab-2 - 我的第一个站点</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">我的第一个站点</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ZJU CS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../" class="dropdown-item">ZJU CS 课程</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DigitalDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../DigitalDesign/" class="dropdown-item">[大二秋冬] 数字逻辑设计 | Digital Design</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap01/" class="dropdown-item">Chap 1 Digital Systems and Information</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap02/" class="dropdown-item">Chap 2 Combinational Logic Circuits</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap03/" class="dropdown-item">Chap 3 Combinational Logic Design</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap04/" class="dropdown-item">Chap 4 Sequential Circuits</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap05/" class="dropdown-item">Chap 5 Digital Hardware Implementation</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap06/" class="dropdown-item">Chap 6 Registers & Register Transfers</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap07/" class="dropdown-item">Chap 7 Memory Basics</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/glossary/" class="dropdown-item">词汇表</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/learnskill/" class="dropdown-item">学习思路以及资源</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Discrete math</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Discrete%20math/" class="dropdown-item">离散数学</a>
+</li>
+            
+<li>
+    <a href="../../../Discrete%20math/note/" class="dropdown-item">摘要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">FDS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../FDS/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/algorithm/" class="dropdown-item">算法分析</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/exam/" class="dropdown-item">历年卷</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/graph/" class="dropdown-item">图论</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/hash/" class="dropdown-item">散列（哈希）</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/heap/" class="dropdown-item">优先队列（堆）</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/homework/" class="dropdown-item">作业要点</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/set/" class="dropdown-item">并查集</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/sort/" class="dropdown-item">排序</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/tree/" class="dropdown-item">树</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/" class="dropdown-item">数组与链表</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="dropdown-item">栈和队列</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">HPC</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">ZJUSCT</a>
+</li>
+            
+<li>
+    <a href="../../AIPP/" class="dropdown-item">并行计算设计导论</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Class</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../class/" class="dropdown-item">note of class</a>
+</li>
+            
+<li>
+    <a href="../../class/L1/" class="dropdown-item">7月4日 计算机体系结构和高性能计算基础</a>
+</li>
+            
+<li>
+    <a href="../../class/L2/" class="dropdown-item">7月5日 高性能计算方法论（HPC）</a>
+</li>
+            
+<li>
+    <a href="../../class/L3/" class="dropdown-item">7月6日 集群软硬件以及运维基础</a>
+</li>
+            
+<li>
+    <a href="../../class/L4/" class="dropdown-item">7月8日 向量化并行计算基础</a>
+</li>
+            
+<li>
+    <a href="../../class/L5/" class="dropdown-item">7月9日 GPU (Graphic Processing Unit)</a>
+</li>
+            
+<li>
+    <a href="../../class/L6/" class="dropdown-item">7月10日 OpenMP</a>
+</li>
+            
+<li>
+    <a href="../../class/L7/" class="dropdown-item">7月11号 机器学习（Machine Learning)</a>
+</li>
+            
+<li>
+    <a href="../../class/L8/" class="dropdown-item">高性能计算高级话术</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Homework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../lab1/" class="dropdown-item">Lab-1</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Lab-2</a>
+</li>
+            
+<li>
+    <a href="../lab2/" class="dropdown-item">Lab2 向量化计算</a>
+</li>
+            
+<li>
+    <a href="../lab3/" class="dropdown-item">Lab-3 基于CUDA对GEMM的优化</a>
+</li>
+            
+<li>
+    <a href="../lab4/" class="dropdown-item">Lab-4 PCG算法在OMP和MPI下的优化</a>
+</li>
+            
+<li>
+    <a href="../lab5/" class="dropdown-item">Lab-5 AI相关</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../lab1/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../lab2/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#lab-2" class="nav-link">Lab-2</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#lab-description" class="nav-link">Lab Description</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#include" class="nav-link">include </a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#include_1" class="nav-link">include </a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#include_2" class="nav-link">include </a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introduction-knowledge" class="nav-link">Introduction Knowledge(可以跳过不看)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lab-design-test-result" class="nav-link">Lab Design &amp; Test Result</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#discussion" class="nav-link">Discussion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="lab-2">Lab-2</h1>
+<div class="toc">
+<ul>
+<li><a href="#lab-2">Lab-2</a><ul>
+<li><a href="#lab-description">Lab Description</a></li>
+</ul>
+</li>
+<li><a href="#include">include </a></li>
+<li><a href="#include_1">include </a></li>
+<li><a href="#include_2">include </a><ul>
+<li><a href="#introduction-knowledge">Introduction Knowledge(可以跳过不看)</a><ul>
+<li><a href="#simd">SIMD</a></li>
+<li><a href="#_1">向量化指令</a></li>
+<li><a href="#_2">汇编语言</a></li>
+</ul>
+</li>
+<li><a href="#lab-design-test-result">Lab Design &amp; Test Result</a><ul>
+<li><a href="#code-design">Code Design</a></li>
+<li><a href="#_3">汇编比较</a><ul>
+<li><a href="#simd_1">SIMD的汇编</a></li>
+<li><a href="#_4">普通的汇编</a></li>
+<li><a href="#_5">源代码中普通表达式的汇编</a></li>
+</ul>
+</li>
+<li><a href="#_6">实验结果</a></li>
+</ul>
+</li>
+<li><a href="#discussion">Discussion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="lab-description">Lab Description</h2>
+<hr />
+<p>使用这些函数 API 需要 include 对应的头文件，不同 SIMD 指令集需要的头文件不同，具体需要参考 Intel 相关文档。</p>
+<blockquote>
+<p>```c</p>
+<h1 id="include">include <smmintrin.h></h1>
+<h1 id="include_1">include <emmintrin.h></h1>
+<h1 id="include_2">include <immintrin.h></h1>
+<p>```</p>
+</blockquote>
+<p>本次实验的实验目标：通过使用手写 SIMD 向量化的方式对这个循环进行优化</p>
+<pre><code class="language-c">/* 可以修改的代码区域 */
+// -----------------------------------
+for (int i = 0; i &lt; MAXN; ++i)
+{
+    c[i] += a[i] * b[i];
+}
+// -----------------------------------
+
+</code></pre>
+<blockquote>
+<blockquote>
+<p>详情请看<a href="https://zjusct.pages.zjusct.io/summer-course-2023/HPC101-Labs-2023/Lab2.5-Vectors-Bonus/">实验指导</a></p>
+</blockquote>
+</blockquote>
+<h2 id="introduction-knowledge">Introduction Knowledge(可以跳过不看)</h2>
+<hr />
+<h3 id="simd">SIMD</h3>
+<p><strong>单指令流多数据流</strong>（英语：<strong>Single Instruction Multiple Data</strong>，<a href="https://zh.wikipedia.org/wiki/縮寫">缩写</a>：<strong>SIMD</strong>）是一种采用一个<a href="https://zh.wikipedia.org/wiki/控制器">控制器</a>来控制多个<a href="https://zh.wikipedia.org/wiki/处理器">处理器</a>，同时对一组数据（又称“<a href="https://zh.wikipedia.org/w/index.php?title=数据向量&amp;action=edit&amp;redlink=1">数据向量</a>”）中的每一个分别执行<strong>相同</strong>的操作从而实现空间上的<a href="https://zh.wikipedia.org/wiki/并行">并行</a>性的技术。</p>
+<p>在<a href="https://zh.wikipedia.org/wiki/微处理器">微处理器</a>中，单指令流多数据流技术则是一个<a href="https://zh.wikipedia.org/wiki/控制器">控制器</a>控制多个平行的<a href="https://zh.wikipedia.org/w/index.php?title=处理微元&amp;action=edit&amp;redlink=1">处理微元</a>，例如<a href="https://zh.wikipedia.org/wiki/Intel">Intel</a>的<a href="https://zh.wikipedia.org/wiki/MMX">MMX</a>或<a href="https://zh.wikipedia.org/wiki/SSE">SSE</a>，以及<a href="https://zh.wikipedia.org/wiki/AMD">AMD</a>的<a href="https://zh.wikipedia.org/wiki/3D_Now!">3D Now!</a>指令集。</p>
+<p><a href="https://zh.wikipedia.org/wiki/圖形處理器">图形处理器</a>（GPU）拥有强大的并发处理能力和可编程流水线，面对单指令流多数据流时，运算能力远超传统CPU。<a href="https://zh.wikipedia.org/wiki/OpenCL">OpenCL</a>和<a href="https://zh.wikipedia.org/wiki/CUDA">CUDA</a>分别是目前最广泛使用的开源和专利<a href="https://zh.wikipedia.org/wiki/通用圖形處理器">通用图形处理器</a>（GPGPU）运算语言。</p>
+<h3 id="_1">向量化指令</h3>
+<p>现代处理器一般都支持向量化指令，x86 架构下 Intel 和 AMD 两家的处理器都提供了诸如 SSE，AVX 等 SIMD 指令集，一条指令可以同时操作多个数据进行运算，大大提高了现代处理器的数据吞吐量。</p>
+<p>现代编译器在高优化等级下，具有自动向量化的功能，对于结构清晰，循环边界清晰的程序，编译器的自动向量化已经可以达到很优秀的程度了。然而，编译器的优化始终是保守的，很多情况下编译器无法完成使用 SIMD 指令进行向量化的工作，为了追求性能，高性能计算领域经常需要手写 SIMD 代码进行代码优化。</p>
+<p>显然直接手写汇编指令过于困难，在 C 语言环境下，Intel 提供了一整套关于 SIMD 指令的函数封装接口和指令相关行为的参照手册，可以在<a href="https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html">参考资料</a>中找到。</p>
+<h3 id="_2">汇编语言</h3>
+<p><strong>汇编语言</strong>（英语：assembly language）[<a href="https://zh.wikipedia.org/wiki/汇编语言#cite_note-1">注 1]</a>[<a href="https://zh.wikipedia.org/wiki/汇编语言#cite_note-2">1]</a>是任何一种用于<a href="https://zh.wikipedia.org/wiki/电子计算机">电子计算机</a>、<a href="https://zh.wikipedia.org/wiki/微处理器">微处理器</a>、<a href="https://zh.wikipedia.org/wiki/微控制器">微控制器</a>，或其他可编程器件的<a href="https://zh.wikipedia.org/wiki/低级语言">低级语言</a>。在不同的设备中，汇编语言对应着不同的<a href="https://zh.wikipedia.org/wiki/机器语言">机器语言</a><a href="https://zh.wikipedia.org/wiki/指令集架構">指令集</a>。一种汇编语言专用于某种<a href="https://zh.wikipedia.org/wiki/计算机系统结构">计算机系统结构</a>，而不像许多<a href="https://zh.wikipedia.org/wiki/高级语言">高级语言</a>，可以在不同系统平台之间移植。</p>
+<p>使用汇编语言编写的源代码，然后通过相应的汇编程序将它们转换成可执行的机器代码。这一过程被称为<strong>汇编过程</strong>。</p>
+<blockquote>
+<blockquote>
+<p>关于汇编：</p>
+<ol>
+<li>学习内容十分推荐去看<a href="https://csapp.cs.cmu.edu/">CSAPP</a></li>
+<li>有个在线的<a href="https://godbolt.org/">编译器</a>能够有助于你理解!</li>
+<li>当然我也建议大家可以在自己本地的电脑上通过gcc的一些参数选项自己来了解汇编。</li>
+</ol>
+</blockquote>
+</blockquote>
+<h2 id="lab-design-test-result">Lab Design &amp; Test Result</h2>
+<hr />
+<h3 id="code-design">Code Design</h3>
+<p><strong>My Code:</strong></p>
+<pre><code class="language-c">for (int n = 0; n &lt; 20; ++n)
+{
+    /* 可以修改的代码区域 */
+    // -----------------------------------
+    __m256 vecA, vecB, vecC, vecAB;
+    for (int i = 0; i &lt; MAXN; i += 8) 
+    {
+        vecA = _mm256_loadu_ps(a + i);
+        vecB = _mm256_loadu_ps(b + i);
+        vecC = _mm256_loadu_ps(c + i);
+
+        // vecAB = _mm256_mul_ps(vecA, vecB);
+        // vecC = _mm256_add_ps(vecAB, vecC);
+        vecC = _mm256_fmadd_ps(vecA, vecB, vecC);
+        _mm256_storeu_ps(c + i, vecC);
+    }
+}
+</code></pre>
+<blockquote>
+<blockquote>
+<p>ps: 这段代码也没有考虑内存对齐问题，如果你的数据是对齐的，你当然可以使用<code>_mm256_load_ps</code>和<code>_mm256_store_ps</code>来提高性能。</p>
+</blockquote>
+</blockquote>
+<h3 id="_3">汇编比较</h3>
+<h4 id="simd_1">SIMD的汇编</h4>
+<p><img alt="" src="../graph/Snipaste_2023-07-10_13-25-41.png" /></p>
+<p><img alt="" src="F:\Note of computer\docs\ZJU_CS\超算\homework\graph\Snipaste_2023-07-10_13-26-45.png" /></p>
+<h4 id="_4">普通的汇编</h4>
+<p><img alt="" src="../graph/Snipaste_2023-07-10_13-27-01.png" /></p>
+<h4 id="_5">源代码中普通表达式的汇编</h4>
+<p>我们不难看到他的处理也已经有SIMD（如：<code>vmovss</code>、<code>vaddss</code>）等的优化了</p>
+<p><img alt="" src="../graph/Snipaste_2023-07-10_13-35-23.png" /></p>
+<h3 id="_6">实验结果</h3>
+<p>ps:记得添加<code>gcc</code>的编译选项，否则可能不通过!</p>
+<p><img alt="" src="../graph/Snipaste_2023-07-09_13-26-16.png" /></p>
+<p><strong>结论：</strong>最后的加速比将近2.</p>
+<h2 id="discussion">Discussion</h2>
+<hr />
+<p>通过手写SIMD的分装函数实现汇编上的优化。在学习的过程中我还看到，现代编译器都十分智能，我们甚至可以通过例如像：<code>GCC</code>编译器：使用<code>-O3</code>选项启用所有优化，并使用<code>-ftree-vectorize</code>选项启用自动向量化。（如下图）当然有的时候可能因为分支复杂的原因无法进行优化，我们也可以添加<strong>编译指导语句</strong>例如：<code>\#pragma omp parallel for reduction(+:sum) private(x)</code>来提示编译器帮我们优化</p>
+<p><img alt="" src="../graph/Snipaste_2023-07-10_13-37-47.png" /></p>
+<p>实际自动优化的加速比已经非常接近手动优化的了：</p>
+<p><img alt="" src="../graph/Snipaste_2023-07-10_13-41-17.png" /></p>
+<p>此外，这些封装函数的底层实现还是改变汇编语言。这当然得益于现代计算机高速发展使得cpu上能实现更多的指令加速工作。向量化的思想以及这个函数的整体构造，其实跟我们在<code>CUDA</code>编程课上分配threads去完成加法工作一样十分相似。包括一些MPI的设计结构也是如此。通过向量化（亦或是封装统一处理的思想）来实现high performance！</p>
+<p>最后的最后我想说的是：正如实验指导和上课讲过的那样：“深入到这个级别的优化已经开始需要考虑具体处理器的体系结构细节了，如某个架构下某条指令的实现延时和吞吐量是多少，处理器提供了多少向量寄存器，访存的对齐等等。这种时候编译器具体产生的汇编代码能比 C 语言代码提供更多的信息，你能了解到自己使用了多少寄存器，编译器是否生成了预期外的代码等等。但这一定是你<strong>最后再去考虑</strong>去通过SIMD优化代码”。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js"></script>
+        <script src="../../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>树 - 我的第一个站点</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">我的第一个站点</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ZJU CS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">ZJU CS 课程</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DigitalDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../DigitalDesign/" class="dropdown-item">[大二秋冬] 数字逻辑设计 | Digital Design</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap01/" class="dropdown-item">Chap 1 Digital Systems and Information</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap02/" class="dropdown-item">Chap 2 Combinational Logic Circuits</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap03/" class="dropdown-item">Chap 3 Combinational Logic Design</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap04/" class="dropdown-item">Chap 4 Sequential Circuits</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap05/" class="dropdown-item">Chap 5 Digital Hardware Implementation</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap06/" class="dropdown-item">Chap 6 Registers & Register Transfers</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap07/" class="dropdown-item">Chap 7 Memory Basics</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/glossary/" class="dropdown-item">词汇表</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/learnskill/" class="dropdown-item">学习思路以及资源</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Discrete math</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Discrete%20math/" class="dropdown-item">离散数学</a>
+</li>
+            
+<li>
+    <a href="../../Discrete%20math/note/" class="dropdown-item">摘要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">FDS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../algorithm/" class="dropdown-item">算法分析</a>
+</li>
+            
+<li>
+    <a href="../exam/" class="dropdown-item">历年卷</a>
+</li>
+            
+<li>
+    <a href="../graph/" class="dropdown-item">图论</a>
+</li>
+            
+<li>
+    <a href="../hash/" class="dropdown-item">散列（哈希）</a>
+</li>
+            
+<li>
+    <a href="../heap/" class="dropdown-item">优先队列（堆）</a>
+</li>
+            
+<li>
+    <a href="../homework/" class="dropdown-item">作业要点</a>
+</li>
+            
+<li>
+    <a href="../set/" class="dropdown-item">并查集</a>
+</li>
+            
+<li>
+    <a href="../sort/" class="dropdown-item">排序</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">树</a>
+</li>
+            
+<li>
+    <a href="../%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/" class="dropdown-item">数组与链表</a>
+</li>
+            
+<li>
+    <a href="../%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="dropdown-item">栈和队列</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">HPC</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/" class="dropdown-item">ZJUSCT</a>
+</li>
+            
+<li>
+    <a href="../../HPC/AIPP/" class="dropdown-item">并行计算设计导论</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Class</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/class/" class="dropdown-item">note of class</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L1/" class="dropdown-item">7月4日 计算机体系结构和高性能计算基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L2/" class="dropdown-item">7月5日 高性能计算方法论（HPC）</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L3/" class="dropdown-item">7月6日 集群软硬件以及运维基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L4/" class="dropdown-item">7月8日 向量化并行计算基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L5/" class="dropdown-item">7月9日 GPU (Graphic Processing Unit)</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L6/" class="dropdown-item">7月10日 OpenMP</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L7/" class="dropdown-item">7月11号 机器学习（Machine Learning)</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L8/" class="dropdown-item">高性能计算高级话术</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Homework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/homework/lab1/" class="dropdown-item">Lab-1</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab2.5/" class="dropdown-item">Lab-2</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab2/" class="dropdown-item">Lab2 向量化计算</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab3/" class="dropdown-item">Lab-3 基于CUDA对GEMM的优化</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab4/" class="dropdown-item">Lab-4 PCG算法在OMP和MPI下的优化</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab5/" class="dropdown-item">Lab-5 AI相关</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../sort/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">树</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">预备知识</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">二叉树</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#adt" class="nav-link">查找树 ADT——二叉查找树</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_21" class="nav-link">二叉树的重建</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">树</h1>
+<h2 id="_2">预备知识</h2>
+<h3 id="_3">基本概念</h3>
+<ul>
+<li><strong>树</strong>是一个节点的集合。当集合非空时，树包括</li>
+<li><strong>根</strong></li>
+<li>0 或多个非空的子树 $T_1,T_2,\ldots,T_k$，这些子树中每一棵子树都被来自根 r 的一条有向的边所连接。</li>
+<li>每一棵子树的根叫做根 r 的<strong>儿子</strong>，而 r 是每一棵子树的根的<strong>父亲</strong>。</li>
+<li>一棵树是 $N$ 个节点和 $N-1$ 条边的集合。</li>
+<li>没有儿子的节点称为<strong>树叶</strong></li>
+<li>具有相同父亲的节点称为<strong>兄弟</strong></li>
+<li>一个点的<strong>度</strong>，是这个点的儿子数量</li>
+<li>一棵树的<strong>度</strong>，是这棵树里点的度数的最大值，即 $\max\limits_{node\in tree}{deg(node)}$</li>
+<li>从节点 $n_1$ 到 $n_k$ 的<strong>路径</strong>定义为 $n_1,n_2,\ldots,n_k$ 的一个序列，使得对于 $1\leq i &lt; k$ 节点 $n_i$ 是 $n_{i+1}$ 的父亲。这条路径是唯一的。</li>
+<li>路径的<strong>长度</strong>就是路径上的边的数量</li>
+<li>对于任意节点 $n_i$, $n_i$ 的<strong>深度</strong>为从根到 $n_i$ 的唯一路径的长度。</li>
+<li>对于任意节点 $n_i$, $n_i$ 的<strong>高度</strong>为从 $n_i$ 到一片树叶的最长路径的长度。</li>
+<li>一棵树的高度/深度：根的高度</li>
+<li>如果存在从 $n_1$ 到 $n_2$ 的一条路径，那么 $n_1$ 是 $n_2$ 的一位<strong>祖先</strong>，而 $n_2$ 是 $n_1$ 的一个<strong>后裔</strong>，如果 $n_1\neq n_2$ 称为<strong>真祖先和真后裔</strong>。</li>
+</ul>
+<h3 id="_4">实现</h3>
+<p>我们这里使用 <strong>FirstChild-NextSibling Representation</strong>, 将每个节点的所有儿子放在树节点的链表中</p>
+<div align=center><img alt="20240114221829.png" src="img/tree/20240114221829.png"width = 90%/></div>
+
+<details>
+
+
+<pre><code class="language-c">typedef struct TreeNode *PrtToNode;
+
+struct Tree Node {
+    ElementType Element;
+    PtrToNode FirstChild;
+    PtrToNode NextSibling;
+}
+</code></pre>
+
+
+</details>
+
+<h2 id="_5">二叉树</h2>
+<p><strong>二叉树</strong>是一棵树，其中每个节点的儿子不能多于两个。
+Rotate the FirstChild-NextSibling tree clockwise by $45\degree$</p>
+<h3 id="_6">表达式树</h3>
+<p>表达式树的<strong>树叶是操作数</strong>，比如常数或变量，<strong>而其他的节点为操作符</strong>。因为我们的操作符一般是二元的，所以我们可以得到一棵二叉树。如果有单目操作符，那么节点就只有一个儿子。</p>
+<p>!!! example
+$A+B*C/D$ 表示如下：</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211131503235.png" width = 20%/> </div>
+
+<h4 id="_7">树的遍历</h4>
+<p><strong>树的遍历</strong>即每个节点访问一次</p>
+<h5 id="_8">前序遍历</h5>
+<details>
+
+
+<pre><code class="language-C">void  preorder ( tree_ptr  tree )
+{  if  ( tree )   {
+        visit ( tree );
+        for (each child C of tree )
+            preorder ( C );
+    }
+}
+</code></pre>
+
+
+</details>
+
+<h5 id="_9">后序遍历</h5>
+<details>
+
+
+<pre><code class="language-C">void  postorder ( tree_ptr  tree )
+{  if  ( tree )   {
+        for (each child C of tree )
+            postorder ( C );
+        visit ( tree );
+    }
+}
+</code></pre>
+
+
+</details>
+
+<h5 id="_10">层序遍历</h5>
+<details>
+
+
+<pre><code class="language-C">void  levelorder ( tree_ptr  tree )
+{   enqueue ( tree );
+    while (queue is not empty) {
+        visit ( T = dequeue ( ) );
+        for (each child C of T )
+            enqueue ( C );
+    }
+}
+</code></pre>
+
+
+</details>
+
+<h5 id="_11">中序遍历</h5>
+<details>
+
+
+<pre><code class="language-C">void  inorder ( tree_ptr  tree )
+{  if  ( tree )   {
+        inorder ( tree-&gt;Left );
+        visit ( tree-&gt;Element );
+        inorder ( tree-&gt;Right );
+   }
+}
+</code></pre>
+
+
+</details>
+
+<p>!!! Example
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202211131503235.png" width = 20%/> </div></p>
+<pre><code>* 中序遍历: $A+B*C/D$
+* 前序遍历: $+A/*BCD$
+* 后序遍历: $ABC*D/+$
+</code></pre>
+</details>
+<p>!!! warning
+    T与其的BT
+    T的先序遍历与其BT的先序遍历相同
+    T的后序遍历与其BT的中序遍历相同</p>
+<h3 id="_12">线索二叉树</h3>
+<p>规则:
+<em>序线索二叉树
+- 如果 <code>Tree-&gt;Left</code> 为空，用一个指向</em>序遍历中当前节点的前驱的指针代替它
+- 如果 <code>Tree-&gt;Right</code> 为空，用一个指向*序遍历中当前节点的后继的指针代替它
+- 这里没有空闲的指针，因此一棵线索二叉树需要有一个左儿子指针指向第一个节点的头节点。</p>
+<pre><code class="language-C">typedef  struct  ThreadedTreeNode  *PtrTo  ThreadedNode;
+typedef  struct  PtrToThreadedNode  ThreadedTree;
+typedef  struct  ThreadedTreeNode {
+       int LeftThread;   /* if it is TRUE, then Left */
+       ThreadedTree Left;      /* is a thread, not a child ptr.   */
+       ElementType  Element;
+       int RightThread; /* if it is TRUE, then Right */
+       ThreadedTree Right;    /* is a thread, not a child ptr.   */
+}
+</code></pre>
+<p>!!! Example</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211131503235.png" width = 20%/> </div>
+<p>那么它对应的线索二叉树如下:</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211131530456.png" width = 50%/> </div>
+
+<p>!!! Note
+在树里面，儿子的次序没有影响。但对于二叉树而言，左儿子和右儿子是不同的。</p>
+<p>!!! Info "完全二叉树"
+所有叶节点都位于相邻的两个层上</p>
+<h3 id="_13">二叉树的性质</h3>
+<ul>
+<li>第 i 层节点个数最多为 $2^{i-1},i\geq 1$. 深度为 k 的二叉树最多有 $2^k-1$ 个节点。</li>
+<li>对于任何非空二叉树都有 $n_0=n_2+1$. 其中 $n_0$ 是叶子节点的个数，$n_2$ 是度数为 2 的节点个数。</li>
+</ul>
+<p>!!! Note "Proof"
+令$n_1$ 表示度数为 1 的节点个数，那么我们有 $n=n_0+n_1+n_2$.<br />
+ 令$B$ 表示所有的边，那么 $B=n-1$，同时又有 $B=n_1+2n_2$.
+联立可得到 $n_0=n_2+1$.</p>
+<h2 id="adt">查找树 ADT——二叉查找树</h2>
+<h3 id="_14">定义</h3>
+<p>一棵<strong>二叉查找树</strong>是二叉的，如果非空，那么满足下列性质:</p>
+<ul>
+<li>每个节点有一个关键字，是各不相同的整数</li>
+<li>如果左子树非空，那么左子树所有关键字的值必须小于当前节点的关键字</li>
+<li>如果右子树非空，那么右子树所有关键字的值必须大于当前节点的关键字</li>
+<li>左子树和右子树仍是二叉查找树</li>
+</ul>
+<h3 id="adt_1">ADT 模型</h3>
+<ul>
+<li>对象: 一个有限的有序集</li>
+<li>操作:</li>
+<li>初始化</li>
+<li>查找关键字</li>
+<li>查找最大/最小的关键字</li>
+<li>插入关键字</li>
+<li>删除关键字</li>
+<li>检索位置</li>
+</ul>
+<h3 id="_15">实现</h3>
+<h4 id="_16">查找关键字</h4>
+<p>返回树 T 中具有关键字 X 节点的指针，我们可以对树 T 的左子树或者右子树进行递归调用，查找哪个子树取决于 X 与当前根节点关键字的大小关系。<br />
+$T(N)=S(N)=O(d)$, 这里 d 是树的深度</p>
+<details>
+
+
+<pre><code class="language-C">Position  Find( ElementType X,  SearchTree T )
+{
+      if ( T == NULL )
+          return  NULL;  /* not found in an empty tree */
+      if ( X &lt; T-&gt;Element )  /* if smaller than root */
+          return  Find( X, T-&gt;Left );  /* search left subtree */
+      else
+          if ( X &gt; T-&gt;Element )  /* if larger than root */
+      return  Find( X, T-&gt;Right );  /* search right subtree */
+          else   /* if X == root */
+      return  T;  /* found */
+}
+</code></pre>
+
+
+</details>
+<p><br></p>
+<p>注意到这是一个尾递归，因此我们可以优化为迭代版本</p>
+<details>
+
+
+<pre><code class="language-C">Position  Iter_Find( ElementType X,  SearchTree T )
+{
+    /* iterative version of Find */
+    while (T) {
+        if (X == T-&gt;Element)
+    return T;  /* found */
+        if (X &lt; T-&gt;Element)
+            T = T-&gt;Left ; /*move down along left path */
+        else
+            T = T-&gt; Right ; /* move down along right path */
+    }  /* end while-loop */
+    return  NULL;   /* not found */
+}
+</code></pre>
+
+
+</details>
+
+<h4 id="_17">查找最小/最大关键字</h4>
+<p>查找最小元素，只需要从根节点开始，只要有左儿子就向左进行，终止点就是最小的元素了。查找最大元素类似。<br />
+$T(N)=O(d)$</p>
+<details>
+
+
+<pre><code class="language-C">Position  FindMin( SearchTree T )
+{
+      if ( T == NULL )
+          return  NULL; /* not found in an empty tree */
+      else
+          if ( T-&gt;Left == NULL )   return  T;  /* found left most */
+          else   return  FindMin( T-&gt;Left );   /* keep moving to left */
+}
+Position  FindMax( SearchTree T )
+{
+    if ( T != NULL )
+        while ( T-&gt;Right != NULL )
+        T = T-&gt;Right;   /* keep moving to find right most */
+    return T;  /* return NULL or the right most */
+}
+</code></pre>
+
+
+</details>
+
+<h4 id="_18">插入</h4>
+<p>插入可以用查找的思路，如果找到 X 那么就什么也不做（或者做一些更新），否则就将 X 插入到遍历路径上的最后一点上。<br />
+$T(N)=O(d)$</p>
+<details>
+
+
+<pre><code class="language-C">SearchTree  Insert( ElementType X, SearchTree T )
+{
+    if ( T == NULL ) { /* Create and return a one-node tree */
+    T = malloc( sizeof( struct TreeNode ) );
+    if ( T == NULL )
+       FatalError( &quot;Out of space!!!&quot; );
+    else {
+       T-&gt;Element = X;
+       T-&gt;Left = T-&gt;Right = NULL; }
+      }  /* End creating a one-node tree */
+     else  /* If there is a tree */
+    if ( X &lt; T-&gt;Element )
+       T-&gt;Left = Insert( X, T-&gt;Left );
+    else
+       if ( X &gt; T-&gt;Element )
+          T-&gt;Right = Insert( X, T-&gt;Right );
+       /* Else X is in the tree already; we'll do nothing */
+    return  T;   /* Do not forget this line!! */
+}
+</code></pre>
+
+
+</details>
+
+<h4 id="_19">删除</h4>
+<p>如果要删除的节点是树叶，我们可以立即删除，如果节点有一个儿子，可以在父节点调整指针后绕过该节点并删除。<br />
+但如果有两个儿子，一般的删除策略是用其右子树中最小元（或者左子树中的最大元）代替该节点的数据并递归地删除那个节点。<br />
+$T(N)=O(h)$, 其中 h 是树的高度。</p>
+<details>
+
+
+<pre><code class="language-C">SearchTree  Delete( ElementType X, SearchTree T )
+{
+    Position  TmpCell;
+    if ( T == NULL )   Error( &quot;Element not found&quot; );
+    else if (X &lt; T-&gt;Element)  /* Go left */
+        T-&gt;Left = Delete( X, T-&gt;Left );
+    else if ( X &gt; T-&gt;Element )  /* Go right */
+        T-&gt;Right = Delete( X, T-&gt;Right );
+    else  /* Found element to be deleted */
+        if ( T-&gt;Left &amp;&amp; T-&gt;Right ) {  /* Two children */
+            /* Replace with smallest in right subtree */
+            TmpCell = FindMin( T-&gt;Right );
+            T-&gt;Element = TmpCell-&gt;Element;
+            T-&gt;Right = Delete( T-&gt;Element, T-&gt;Right );  } /* End if 把刚刚交换的那个东西给删了*/
+        else {  /* One or zero child */
+            TmpCell = T;
+            if ( T-&gt;Left == NULL ) /* Also handles 0 child */
+                T = T-&gt;Right;
+            else  if ( T-&gt;Right == NULL )  
+                T = T-&gt;Left;
+            free( TmpCell );  }  /* End else 1 or 0 child */
+    return  T;
+}
+</code></pre>
+
+
+</details>
+
+<p>!!! Note
+    如果这里没有很多删除操作，通常使用<strong>懒惰操作</strong>的策略，当一个节点被删除时，我们不删除它，做一个删除的记号，这样的好处是在有重复关键字时可以直接在频率上加减。</p>
+<h3 id="_20">平均情形分析</h3>
+<p>Q. 把 n 个元素放在二叉查找树中，这棵树可以有多高？
+A. 高度取决于插入的顺序。最坏可以达到 $N$</p>
+<p>!!! Example 
+    * 插入顺序 4, 2, 1, 3, 6, 5, 7</p>
+<pre><code>&lt;div align=center&gt; &lt;img src="http://cdn.hobbitqia.cc/202211131612003.png" width = 20%/&gt; &lt;/div&gt;
+
+* 插入顺序 1, 2, 3, 4, 5, 6, 7
+
+&lt;div align=center&gt; &lt;img src="http://cdn.hobbitqia.cc/202211131613806.png" width = 20%/&gt; &lt;/div&gt;
+</code></pre>
+<p>!!! Info
+    兄弟: sibling
+    操作数: operand
+    前序遍历: preorder traversal
+    后序遍历: postorder traversal
+    层序遍历: levelorder traversal
+    中序遍历: inorder traversal
+    线索二叉树: Threaded Binary Trees</p>
+<h2 id="_21">二叉树的重建</h2>
+<p>二叉树的重建方法：
+一、根据前序加中序遍历重建二叉树
+构造该二叉树的过程如下：
+1. 根据前序序列的第一个元素建立根结点；
+2. 在中序序列中找到该元素，确定根结点的左右子树的中序序列；
+3. 在前序序列中确定左右子树的前序序列；
+4. 由左子树的前序序列和中序序列建立左子树；
+5. 由右子树的前序序列和中序序列建立右子树。
+二、根据中序加后序遍历重建二叉树
+构造该二叉树的过程如下：
+1. 根据后序序列的最后一个元素建立根结点；
+2. 在中序序列中找到该元素，确定根结点的左右子树的中序序列；
+3. 在后序序列中确定左右子树的后序序列；
+4. 由左子树的后序序列和中序序列建立左子树；
+5. 由右子树的后序序列和中序序列建立右子树。
+<a href="https://blog.csdn.net/qfturauyls/article/details/107392618?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170540385116800226576021%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=170540385116800226576021&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-107392618-null-null.142^v99^pc_search_result_base9&amp;utm_term=%E5%B7%B2%E7%9F%A5%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E5%90%8E%E5%BA%8F&amp;spm=1018.2226.3001.4187">如何确定</a></p>
+<p>还有根据前序和后序确定中序</p>
+<p>思路： 构造二叉树，第一件事一定是找根节点，然后想办法构造左右子树</p>
+<div align=center><img alt="20240116192532.png" src="img/tree/20240116192532.png"width = 90%/></div>
+
+<ul>
+<li>前序遍历第一个元素是根节点，后面的那一堆是左子树，接着是右子树</li>
+<li>后序遍历第一个出现的是左子树，然后是右子树，最后才是根节点。</li>
+</ul>
+<p>答案不唯一！！</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>摘要 - 我的第一个站点</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">我的第一个站点</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ZJU CS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">ZJU CS 课程</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DigitalDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../DigitalDesign/" class="dropdown-item">[大二秋冬] 数字逻辑设计 | Digital Design</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap01/" class="dropdown-item">Chap 1 Digital Systems and Information</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap02/" class="dropdown-item">Chap 2 Combinational Logic Circuits</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap03/" class="dropdown-item">Chap 3 Combinational Logic Design</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap04/" class="dropdown-item">Chap 4 Sequential Circuits</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap05/" class="dropdown-item">Chap 5 Digital Hardware Implementation</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap06/" class="dropdown-item">Chap 6 Registers & Register Transfers</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap07/" class="dropdown-item">Chap 7 Memory Basics</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/glossary/" class="dropdown-item">词汇表</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/learnskill/" class="dropdown-item">学习思路以及资源</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Discrete math</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">离散数学</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">摘要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">FDS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../FDS/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../FDS/algorithm/" class="dropdown-item">算法分析</a>
+</li>
+            
+<li>
+    <a href="../../FDS/exam/" class="dropdown-item">历年卷</a>
+</li>
+            
+<li>
+    <a href="../../FDS/graph/" class="dropdown-item">图论</a>
+</li>
+            
+<li>
+    <a href="../../FDS/hash/" class="dropdown-item">散列（哈希）</a>
+</li>
+            
+<li>
+    <a href="../../FDS/heap/" class="dropdown-item">优先队列（堆）</a>
+</li>
+            
+<li>
+    <a href="../../FDS/homework/" class="dropdown-item">作业要点</a>
+</li>
+            
+<li>
+    <a href="../../FDS/set/" class="dropdown-item">并查集</a>
+</li>
+            
+<li>
+    <a href="../../FDS/sort/" class="dropdown-item">排序</a>
+</li>
+            
+<li>
+    <a href="../../FDS/tree/" class="dropdown-item">树</a>
+</li>
+            
+<li>
+    <a href="../../FDS/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/" class="dropdown-item">数组与链表</a>
+</li>
+            
+<li>
+    <a href="../../FDS/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="dropdown-item">栈和队列</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">HPC</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/" class="dropdown-item">ZJUSCT</a>
+</li>
+            
+<li>
+    <a href="../../HPC/AIPP/" class="dropdown-item">并行计算设计导论</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Class</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/class/" class="dropdown-item">note of class</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L1/" class="dropdown-item">7月4日 计算机体系结构和高性能计算基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L2/" class="dropdown-item">7月5日 高性能计算方法论（HPC）</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L3/" class="dropdown-item">7月6日 集群软硬件以及运维基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L4/" class="dropdown-item">7月8日 向量化并行计算基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L5/" class="dropdown-item">7月9日 GPU (Graphic Processing Unit)</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L6/" class="dropdown-item">7月10日 OpenMP</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L7/" class="dropdown-item">7月11号 机器学习（Machine Learning)</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L8/" class="dropdown-item">高性能计算高级话术</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Homework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/homework/lab1/" class="dropdown-item">Lab-1</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab2.5/" class="dropdown-item">Lab-2</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab2/" class="dropdown-item">Lab2 向量化计算</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab3/" class="dropdown-item">Lab-3 基于CUDA对GEMM的优化</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab4/" class="dropdown-item">Lab-4 PCG算法在OMP和MPI下的优化</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab5/" class="dropdown-item">Lab-5 AI相关</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../FDS/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">摘要</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#chapter-1" class="nav-link">Chapter 1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#chapter-7-relations" class="nav-link">Chapter 7 Relations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#chapter-8-graph" class="nav-link">Chapter 8 Graph</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">摘要</h1>
+<!-- prettier-ignore-start -->
+<p>!!! info "注意"
+    如果latex渲染未成功加载,请刷新网页!</p>
+<!-- prettier-ignore-end -->
+<h2 id="chapter-1">Chapter 1</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">英文</th>
+<th style="text-align: center;">中文</th>
+<th>数学符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">disjunction</td>
+<td style="text-align: center;">并</td>
+<td>$\cup$</td>
+</tr>
+<tr>
+<td style="text-align: center;">conjunction</td>
+<td style="text-align: center;">交</td>
+<td>$\cap$</td>
+</tr>
+<tr>
+<td style="text-align: center;">lemma</td>
+<td style="text-align: center;">引理</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter-7-relations">Chapter 7 Relations</h2>
+<h3 id="71-relations-and-their-properties">7.1 Relations and their properties</h3>
+<ol>
+<li>We write  $aRb$  for $(a,b) \in R$</li>
+</ol>
+<blockquote>
+<p><strong>Definition:</strong> A binary relation R between A and B is a subset of Cartesian product $A \times B$ : $R \subseteq A \times B$</p>
+<p>When $A=B$, $R$ is called <strong>a relation on</strong> set $A$.</p>
+</blockquote>
+<ol>
+<li>
+<p>Distinguish <strong>domain</strong> and <strong>range</strong>. (just like function)</p>
+</li>
+<li>
+<p>n-ary relation: n is called its <strong>degree</strong>.</p>
+</li>
+<li>
+<p>The composite of R and S is the relation: $S \circ R = {(a,c)|a \in A, c \in C \quad \exists b \in B}$ such that  $(a,b)\in R$ and $(b,c)\in S$</p>
+</li>
+<li>
+<p>Power: $R^{n+1} = R^n \circ R$</p>
+</li>
+<li>
+<p>Inverse:$R^{-1} = {(y,x)|(x,y) \in R}$</p>
+</li>
+<li>
+<p>Reflexive / Irreflexive: R is <strong>reflexive</strong> $\Leftrightarrow \forall x \in A, (x,x) \in R$ </p>
+</li>
+<li>
+<p>symmetric / antisymmetric: </p>
+</li>
+</ol>
+<blockquote>
+<p>R is <strong>symmetric</strong> $\Leftrightarrow \forall x, y \in A, (x,y)\in R \Rightarrow (y,x)\in R \Leftrightarrow R^{-1} = R$</p>
+<p>R is <strong>antisymmetric</strong>: $\Leftrightarrow \forall x, y \in A, (x,y)\in R \quad and \quad (y,x)\in R \Rightarrow x = y \Leftrightarrow R \cap R^{-1} \subseteq R_=$</p>
+<p>Non-symmetric $\not\Leftrightarrow$ antisymmetric (eg. $R_=$)</p>
+</blockquote>
+<ol>
+<li>R is <strong>transitive</strong> $\Leftrightarrow \forall x, y, z \in A((x,y)\in R \wedge(y,z) \in R) \Rightarrow (x,z)\in R$</li>
+</ol>
+<blockquote>
+<p><strong>Theorem</strong>:R on a set A is transitive if and only if $R^n \subseteq R$ for $n = 2, 3, \dots$</p>
+<p><strong>Inductive step:</strong> $R^{n+1}$ is also a subset of $R$</p>
+</blockquote>
+<h3 id="72-representing-relations">7.2 Representing Relations</h3>
+<ol>
+<li>Matrices representation.</li>
+</ol>
+<blockquote>
+<ul>
+<li>reflexive $\Leftrightarrow$ All terms $m_{ii}$ in the main diagonal of $M_R$ are 1</li>
+<li>symmetric $\Leftrightarrow m_{ij} = m_{ji}$ for all $i,j$.</li>
+<li>anti-symmetric $\Leftrightarrow$ if $m_{ij} = 1 $ and $i\not= j$ then $m_{ij} = 0$</li>
+<li>Transitive $\Leftrightarrow$  whenever $c_{ij}$ in $C=M_R^2$ is nonzero then entry $m_{ij}$ in $M_R$ is also nonzero</li>
+</ul>
+</blockquote>
+<ol>
+<li>Digraphs representation.</li>
+</ol>
+<blockquote>
+<ul>
+<li>A edge $(a,b)$, a isiInitial vertx and b is terminal vertex</li>
+<li>A edge of form $(a,a)$, called <strong>loop</strong></li>
+<li>reflexible $\Leftrightarrow$ There are loops at every vertex of digraph.</li>
+<li>symmetric $\Leftrightarrow$ Every edge between distinct vertices is accompanied by a edge in the opposite direction.</li>
+</ul>
+</blockquote>
+<h3 id="73-closures-of-relations">7.3 Closures of Relations</h3>
+<ol>
+<li><strong>Definition:</strong> $R \&amp; S$ are relation,while S satisfy:</li>
+</ol>
+<blockquote>
+<ul>
+<li>S with property <strong>P</strong> and $R \subseteq S$</li>
+<li>$\forall S'$ with property <strong>P</strong> and $R \subseteq S'$ , then $S \subseteq S'$</li>
+</ul>
+</blockquote>
+<ol>
+<li><strong>Theorem:</strong> R be a relation on set A.</li>
+</ol>
+<blockquote>
+<ul>
+<li>The <strong>reflexive closure</strong> of relation R: 
+   $$
+   r(R) =R \cup \Delta
+   $$
+   , where $\Delta = {(a,a)|a \in A}$</li>
+<li>The <strong>symmmetric closure</strong> of relation R: 
+   $$
+   S(R) = R \cup R^{-1}
+   $$</li>
+</ul>
+</blockquote>
+<ol>
+<li><strong>Definition:</strong> Path is a sequence of one or more edges in graph G.</li>
+</ol>
+<blockquote>
+<p><strong>Theorem:</strong>  Let R be a relation on set $A$. There is a path of length n from a to b $\Leftrightarrow (a,b) \in R^n$</p>
+</blockquote>
+<ol>
+<li><strong>Definition</strong>: The <strong>connectivity relation</strong> $R^<em> = {(a,b)|\text{there is a path from a to b}}$. 
+   $$
+   R^</em> = \cup^{\infin}_{n=1} R^n
+   $$</li>
+</ol>
+<blockquote>
+<p><strong>Theorem</strong>: The transitive closure of R :
+   $$
+   t(R) = R^*
+   $$</p>
+</blockquote>
+<ol>
+<li>WARSHALL'S algorithm!</li>
+</ol>
+<h3 id="74-equivalence-relations">7.4 Equivalence Relations</h3>
+<ol>
+<li>
+<p><strong>Definition</strong>: Relation $R$~ : $A \leftrightarrow A$ is an <strong>equivalence relation</strong>, if it reflexive, symmetric and transitive.</p>
+</li>
+<li>
+<p><strong>Definition</strong>: Let $R: A \leftrightarrow A$ is an equivalence relation. For any $a \in A$, the <strong>equivalence class</strong> of a is the set of the elements related to a. 
+   $$
+   [a]_R = {x\in A|(x,a) \in R}
+   $$ . 
+   If $b\in [a]_R$. b is called a representative of this equivalence class.</p>
+<blockquote>
+<p>The properties of equivalence classes are:
+1. $\forall a \in A, a[R] \not ={\emptyset}$( by reflexive, $a \in [a]<em>R$ )
+2. $\forall a,b \in A, [a]_R = [b]_R$ or $[a]_R \cap [b]_R = \emptyset$ (by symmetric and transitive) 
+3. $ \cup</em>{a\in A}[a]<em>R = A$ ($A \subseteq \cup</em>{a\in A}, [a]_R \subseteq A$)
+4. $[a]_R \cap [b]_R \not = \emptyset \Rightarrow [a]_R = [b]_R$ (by symmetric and transitive)</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Definition</strong>: The set of all equivalence classes of R is called the <strong>quotient set</strong> of A by R. 
+   $$
+   A/R = {[a]_R|a \in A}
+   $$</p>
+<blockquote>
+<p><strong>Remark:</strong>
+1. If A is finite, then $|A/R| $ is also finite.
+2. If A has n elements, and if every $[a]_R$ has m elements, then $|A/R| = n/m$</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Definition</strong>: A partition $\pi$ on a set $S$ is a family of nonempty subsets of $S$ such that every element of $S$ is in exactly one of these subsets. 
+   $$
+   \pi = {A_1, A_2, \dots, A_n}\</p>
+</li>
+<li>\cup_{k=1}^n A_k =S \ </li>
+<li>A_j \cap A_k = \emptyset \text{ for every j,k with }j \not= k, 1 &lt; j, k &lt; n
+   $$<blockquote>
+<p><strong>Theorem</strong>: Let $R$ be an equivalence relation on a set $S$. Then the equivalence of classes of $R$ form a partition of $X$. Conversely, given a partition ${A_i|i \in I}$ of $S$, there is an equivalence relation $R$ on $S$ such that the equivalence classes of $R$ are the sets $A_i$.</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="75-partial-orderings">7.5 Partial Orderings</h3>
+<ol>
+<li>
+<p><strong>Definition</strong>: A relation $R_{\preceq}$ on a set $S$ ($S \leftrightarrow S$) is a <strong>partial ordering</strong> if it is reflexive, antisymmetric and transitive.</p>
+</li>
+<li>
+<p><strong>Definition</strong>: The element a and b of s poset $S$ are <strong>comparable</strong> if either $a \preceq b$ or $b \preceq a$. Otherwise, a and b are <strong>incomparable</strong>.</p>
+</li>
+<li><strong>Definition</strong>: A poset $S$ is a <strong>total ordering</strong> or <strong>linear ordering</strong> if every pair of elements of $S$ is comparable. A totaly ordered set is also called a <strong>chain</strong>.</li>
+<li><strong>Lexicograpic order</strong>: Construct a poset $S$ by taking the Cartesian product of two posets $S_1$ and $S_2$. The relation $\preceq$ on $S$ is defined by 
+   $$
+   (a_1, a_2) \preceq (b_1, b_2) \Leftrightarrow a_1 \preceq_1 b_1 \text{ and } a_2 \preceq_2 b_2
+   $$</li>
+<li>
+<p><strong>hasse diagram</strong>: A <strong>hasse diagram</strong> of a poset $S$ is a diagram that represents the poset $S$ using points and line segments. The points of the diagram are the elements of $S$, and there is a line segment between $a$ and $b$ if $a \prec b$ and there is no element $c$ such that $a \prec c \prec b$.</p>
+<blockquote>
+<ol>
+<li>Start with the directed graph for the relation.</li>
+<li>Remove all loops.</li>
+<li>Remove all edges that must be present because of the transitive property.</li>
+<li>Finally, arrange each edges so that its initial vertex is below its terminal vertex, Remove all arrows.</li>
+</ol>
+</blockquote>
+</li>
+<li>
+<p><strong>Definition</strong>: Let $(A, \preceq)$ be a partial ordered set, $B\subseteq A$.</p>
+<blockquote>
+<ol>
+<li>a is a maximal element of B if there is no element $b \in B$ such that $a \prec b$.</li>
+<li>b is a minimal element of B if there is no element $b \in B$ such that $b \prec a$.</li>
+<li>a is a greatest element of B if $a \preceq b$ for every $b \in B$.</li>
+<li>b is a least element of B if $b \preceq a$ for every $b \in B$. </li>
+<li>a is an upper bound of B if $b \preceq a$ for every $b \in B$.</li>
+<li>b is a lower bound of B if $a \preceq b$ for every $b \in B$.</li>
+<li>a is the least upper bound of B if a is an upper bound of B and if $a \preceq c$ for every upper bound c of B.</li>
+<li>b is the greatest lower bound of B if b is a lower bound of B and if $c \preceq b$ for every lower bound c of B.</li>
+</ol>
+<p><strong>Remark:</strong>
+Can have many minimal/maximal elements, but only one least/greatest element.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Definition</strong>: A poset $S$ is a <strong>lattice</strong> if every pair of elements of $S$ has a least upper bound and a greatest lower bound.</p>
+</li>
+</ol>
+<h2 id="chapter-8-graph">Chapter 8 Graph</h2>
+<ol>
+<li>
+<p><strong>Definition</strong>: A <strong>graph</strong> $G$ is an ordered pair $(V,E)$, where $V$ is a finite nonempty set and $E$ is a set of two-element subsets of $V$ which is called edges.</p>
+<blockquote>
+<p>Definition: A <strong>multigraph</strong> is a graph that is permitted to have multiple edges with the same endpoints.(don't have loops)</p>
+<p>Definition: A <strong>pseudograph</strong> is a graph that is permitted to have loops.
+<strong>Sum table:</strong>
+<img alt="" src="../graph/graph_sum_table.png" /></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Terminology</strong>:</p>
+</li>
+<li>Two vertices u and v are <strong>adjacent</strong> or <strong>neighbors</strong> if {u,v} is an edge of G.</li>
+<li>If {u,v} is an edge of G, then u and v are <strong>incident</strong> with the edge {u,v}.</li>
+<li>
+<p>The <strong>degree</strong> of a vertex v, denoted by deg(v), is the number of edges incident with v, with loops counted twice.(Pendant vertex: deg(v) = 1)</p>
+</li>
+<li>
+<p><strong>Theorem</strong>: Let $G = (V,E)$ be a graph with $n$ vertices and $m$ edges. Then
+   $$
+   \sum_{v \in V} deg(v) = 2m
+   $$</p>
+<blockquote>
+<p><strong>Corollary</strong>(结论): The number of vertices of odd degree in any graph is even.
+<strong>Corollary</strong>:
+ $$ \sum_{i=1}^{n}{deg^{-}{v_i}} = \sum_{i=1}^{n}{deg^{+}{v_i}} = |E|$$</p>
+</blockquote>
+</li>
+<li>
+<p>Some simple graph</p>
+</li>
+<li>complete graph: $K_n$ is a simple graph with n vertices and exactly one edge between each pair of distinct vertices.($|E| = \frac{n(n-1)}{2}$)</li>
+<li>cycles: $C_n$ is a simple graph with n vertices $v_1, v_2, \dots, v_n$ and edges ${v_1, v_2}, {v_2, v_3}, \dots, {v_{n-1}, v_n}, {v_n, v_1}$</li>
+<li>wheels: $W_n$ is a simple graph with n vertices $v_1, v_2, \dots, v_n$ and edges ${v_1, v_2}, {v_2, v_3}, \dots, {v_{n-1}, v_n}, {v_n, v_1}, {v_1, v_3}, {v_1, v_4}, \dots, {v_1, v_n}$</li>
+<li>n-cubes: $Q_n$ is a simple graph with $2^n$ vertices $v_1, v_2, \dots, v_{2^n}$ and edges ${v_i, v_j}$ if and only if $v_i$ and $v_j$ differ in exactly one bit position.</li>
+<li>bipartite graph: A graph $G = (V,E)$ is bipartite if $$ V = V_1 \cup V_2 \ V_1 \cap V_2 = \emptyset$$ such that no edge has both endpoints in the same subset.</li>
+<li>
+<p>complete bipartite graph: $K_{m,n}$ is a bipartite graph with $m+n$ vertices $v_1, v_2, \dots, v_m$ and $u_1, u_2, \dots, u_n$ and edges ${v_i, u_j}$ for all $i = 1, 2, \dots, m$ and $j = 1, 2, \dots, n$.</p>
+</li>
+<li>
+<p>New graphs from old:</p>
+</li>
+<li>subgraph: $G' = (V', E')$ is a subgraph of $G = (V,E)$ if $V' \subseteq V$ and $E' \subseteq E$.</li>
+<li>complement: $G' = (V, E')$ is the complement of $G = (V,E)$ if $E' = { {u,v} | u,v \in V, u \not= v, {u,v} \not\in E}$</li>
+<li>union: $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$, then $G_1 \cup G_2 = (V_1 \cup V_2, E_1 \cup E_2)$</li>
+<li>
+<p>join: $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$, then $G_1 \vee G_2 = (V_1 \cup V_2, E_1 \cup E_2 \cup { {u,v} | u \in V_1, v \in V_2})$</p>
+</li>
+<li>
+<p>Representing graphs:</p>
+</li>
+<li>adjacency matrix: $A = (a_{ij})$ is a $n \times n$ matrix such that $a_{ij} = 1$ if ${v_i, v_j} \in E$ and $a_{ij} = 0$ otherwise.</li>
+<li>incidence matrix: $B = (b_{ij})$ is a $n \times m$ matrix such that $b_{ij} = 1$ if $v_i$ is incident with $e_j$ and $b_{ij} = 0$ otherwise.</li>
+<li>adjacency list: For each vertex $v_i$, we have a list of all vertices adjacent to $v_i$. (for directed graph, we have two lists for each vertex, one for the vertices adjacent to $v_i$ and one for the vertices from which there is an edge to $v_i$)</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

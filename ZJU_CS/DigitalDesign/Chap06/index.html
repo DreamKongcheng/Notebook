@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Chap 6 Registers & Register Transfers - 我的第一个站点</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">我的第一个站点</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ZJU CS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">ZJU CS 课程</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DigitalDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">[大二秋冬] 数字逻辑设计 | Digital Design</a>
+</li>
+            
+<li>
+    <a href="../Chap01/" class="dropdown-item">Chap 1 Digital Systems and Information</a>
+</li>
+            
+<li>
+    <a href="../Chap02/" class="dropdown-item">Chap 2 Combinational Logic Circuits</a>
+</li>
+            
+<li>
+    <a href="../Chap03/" class="dropdown-item">Chap 3 Combinational Logic Design</a>
+</li>
+            
+<li>
+    <a href="../Chap04/" class="dropdown-item">Chap 4 Sequential Circuits</a>
+</li>
+            
+<li>
+    <a href="../Chap05/" class="dropdown-item">Chap 5 Digital Hardware Implementation</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Chap 6 Registers & Register Transfers</a>
+</li>
+            
+<li>
+    <a href="../Chap07/" class="dropdown-item">Chap 7 Memory Basics</a>
+</li>
+            
+<li>
+    <a href="../glossary/" class="dropdown-item">词汇表</a>
+</li>
+            
+<li>
+    <a href="../learnskill/" class="dropdown-item">学习思路以及资源</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Discrete math</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Discrete%20math/" class="dropdown-item">离散数学</a>
+</li>
+            
+<li>
+    <a href="../../Discrete%20math/note/" class="dropdown-item">摘要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">FDS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../FDS/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../FDS/algorithm/" class="dropdown-item">算法分析</a>
+</li>
+            
+<li>
+    <a href="../../FDS/exam/" class="dropdown-item">历年卷</a>
+</li>
+            
+<li>
+    <a href="../../FDS/graph/" class="dropdown-item">图论</a>
+</li>
+            
+<li>
+    <a href="../../FDS/hash/" class="dropdown-item">散列（哈希）</a>
+</li>
+            
+<li>
+    <a href="../../FDS/heap/" class="dropdown-item">优先队列（堆）</a>
+</li>
+            
+<li>
+    <a href="../../FDS/homework/" class="dropdown-item">作业要点</a>
+</li>
+            
+<li>
+    <a href="../../FDS/set/" class="dropdown-item">并查集</a>
+</li>
+            
+<li>
+    <a href="../../FDS/sort/" class="dropdown-item">排序</a>
+</li>
+            
+<li>
+    <a href="../../FDS/tree/" class="dropdown-item">树</a>
+</li>
+            
+<li>
+    <a href="../../FDS/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/" class="dropdown-item">数组与链表</a>
+</li>
+            
+<li>
+    <a href="../../FDS/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="dropdown-item">栈和队列</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">HPC</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/" class="dropdown-item">ZJUSCT</a>
+</li>
+            
+<li>
+    <a href="../../HPC/AIPP/" class="dropdown-item">并行计算设计导论</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Class</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/class/" class="dropdown-item">note of class</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L1/" class="dropdown-item">7月4日 计算机体系结构和高性能计算基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L2/" class="dropdown-item">7月5日 高性能计算方法论（HPC）</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L3/" class="dropdown-item">7月6日 集群软硬件以及运维基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L4/" class="dropdown-item">7月8日 向量化并行计算基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L5/" class="dropdown-item">7月9日 GPU (Graphic Processing Unit)</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L6/" class="dropdown-item">7月10日 OpenMP</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L7/" class="dropdown-item">7月11号 机器学习（Machine Learning)</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L8/" class="dropdown-item">高性能计算高级话术</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Homework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/homework/lab1/" class="dropdown-item">Lab-1</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab2.5/" class="dropdown-item">Lab-2</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab2/" class="dropdown-item">Lab2 向量化计算</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab3/" class="dropdown-item">Lab-3 基于CUDA对GEMM的优化</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab4/" class="dropdown-item">Lab-4 PCG算法在OMP和MPI下的优化</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab5/" class="dropdown-item">Lab-5 AI相关</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Chap05/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Chap07/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#chap-6-registers-register-transfers" class="nav-link">Chap 6 Registers &amp; Register Transfers</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">寄存器</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">寄存器单元</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">寄存器传输</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">寄存器传输的实现</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">微操作及其实现</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_17" class="nav-link">计数器</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_22" class="nav-link">寄存器传输的控制</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="chap-6-registers-register-transfers">Chap 6 Registers &amp; Register Transfers</h1>
+<h2 id="_1">寄存器</h2>
+<p><strong>寄存器(registers)</strong> 粗略的来说就是一堆触发器以及对应的状态控制电路，用来实现多位数据的存储等操作。</p>
+<p>其中有一种特殊的寄存器叫 <strong><a href="#计数器">计数器(counter)</a></strong>，非常直白的，它的行为就是随着时钟周期不断在固定的状态序列中循环。更形象的，一般是实现自动的计数功能，像电子时钟那样。</p>
+<blockquote>
+<p>Registers are useful for storing and manipulating 控制，操纵，影响information; counters are employed in circuits that sequence and control operations in a digital system.</p>
+</blockquote>
+<p>实现寄存器一个最直白的想法就是公用控制线路和分列数据线路来控制多个触发器，如下图是使用 D <code>FF</code> 实现的一个 4-bit register：</p>
+<p><img alt="" src="../img/95.png" /></p>
+<p>一个寄存器包含一组触发器，由于每一个触发器可以保存一位信息，因此由n个触发器组成的n位寄存器就可以保存n位的二进制信息。在最为广义的定义中，一个寄存器由一组触发器以及实现其状态转换的门电路组成，这种广义定义包含了第4章所讲到的各种时序电路。</p>
+<p>一般而言，寄存器是指一组用于完成特定数据处理任务的触发器以及附加的组合门电路。其中，触发器用来锁存数据，<em>而门电路则用来决定输入触发器的数据是新的还是经过转换的。</em>  ==??==</p>
+<p>我们称新数据被写入寄存器的操作为 <strong>载入(load)</strong>，而如果所有位载入操作在同一个时钟脉冲中完成，我们称之是 <strong>并行(parallel)</strong> 的。</p>
+<p>寄存器和计数器作为时序功能模块广泛应用于数字系统，尤其是数字计算机的设计中寄存器用于存储和处理数据信息，而计数器则主要用于对数字系统中的操作进行排序与控制。</p>
+<hr />
+<h3 id="_2">保持</h3>
+<p>但是我们发现，如图的寄存器在每个时钟都允许载入，换句话来说每个时钟周期都会改变为输入。但是我们希望即使我们不管它它也能保持之前的值，主要有两个方案。</p>
+<p>!!! tip "方案"
+    === "plan A"
+    其中一个做法是需要选择性的让它跟随时钟脉冲切换状态。做法就是将 Control 信号修改为 $C = \overline{Load} + Clock$，如此而来，当 $Load = 0$ 时，始终有 $C = 1$，脉冲消失，寄存器无法被载入；当 $Load = 1$ 时，有 $C = Clock$，。如下图，这种技术叫 <strong>门控时钟(clock gating)</strong>。</p>
+<pre><code>为了使电路正常工作，Load必须在Clock为0期间稳定在正确值0或1，可以让Load信号来自时钟上升沿触发的触发器
+
+![](img/96.png)
+
+
+=== "plan B"
+另外一个做法是，在不希望它修改的时候，不断将它的输入载入，也就是保持不变。我们可以通过一个 `MUX` 来实现这个功能，用 `EN` 使能端来选择是载入新值还是保持之前的值，如下图。
+
+![](img/97.png)
+当EN=1时，选择数据D并加载到该单元;当EN=0时，选择Q，输出信号反馈加载到触发器，以保留该单元的当前状态。
+
+由于D触发器不像其他类型的触发器，**没有保留原状态的输入条件**（因为一定是相反的 ==悟了！==）:在每个时钟脉冲，都是由D输入决定输出的下一个状态，所以从输出到输入的反馈连接是必要的。为了使输出不变，有必要使 D输入等于当前的输出。
+</code></pre>
+<p>!!! warning "clock skew"
+    然而，在门控时钟技术中，由于添加了一个额外的逻辑门，时钟脉冲到达 Control 的时候会出现额外的传播延时，即 <strong>时钟偏移(clock skew)</strong>。而这微小的延时会导致在整个同步系统中，不同组件得到的时钟脉冲有偏差，而这是我们所不希望看到的。所以在实际设计中，我们应当避免或尽可能缩小时钟偏移。</p>
+<hr />
+<h2 id="_3">寄存器单元</h2>
+<p>!!! info "小节导读"
+    本小节在书本中的位置靠后，但是考虑到内容的连续性我决定提前，本节内容会涉及一些之后的内容，实际上的绝对性知识较少，可以粗看过留下印象，大部分知识需要通过案例分析和实践获得，是类似于设计指导思想的内容。</p>
+<p>!!! bug "bug"
+    还不会设计，看书上例子</p>
+<p><strong>寄存器单元(Register Cell)</strong> 是寄存器的个体单元，主要包括一个 <code>FF</code> 及实现其组合逻辑的组合电路。</p>
+<blockquote>
+<p>A single-bit cell of an iterative combinational circuit, connected to a flip-flop that provides the output, forms a two-state sequential circuit called a register cell</p>
+</blockquote>
+<p>对于 n bits 的寄存器单元，我们可以通过实现其 1 bit 的寄存器单元，并复制 n 份实现。</p>
+<p>设计寄存器单元时，我们需要对寄存器单元进行定义。而指定(Specify)一个寄存器单元的功能的主要有这些方面：</p>
+<ul>
+<li>寄存器的功能函数；<ul>
+<li>一般指寄存器传输；</li>
+</ul>
+</li>
+<li>控制信号构成；<ul>
+<li>有哪些控制信号、是否编码、如何决定是否 Load 等；</li>
+</ul>
+</li>
+<li>寄存器的输入数据；<ul>
+<li>有哪些输入数据、是否需要预先处理等；</li>
+</ul>
+</li>
+</ul>
+<p>在实际实现时，分为 <code>MUX</code> 实现和时序逻辑实现两种方法。</p>
+<p>前者就是 <strong><a href="#基于-mux-实现传输">基于 Mux 实现传输</a></strong> 中将要提到的那样，关于上面哪些内容在该小节中的体现如下图；</p>
+<p><img alt="" src="../img/118.png" /></p>
+<p>也就是通过分别实现逻辑，然后通过控制信号选择数据输入来实现。</p>
+<p>而后者按照时序电路的设计方法，确定状态图后根据状态变化设计时序电路，设计优化决定状态转移方程实现，具体可以参考 <strong><a href="../Chap04/#时序电路的设计">第四章#时序电路设计</a></strong>。</p>
+<hr />
+<h2 id="_4">寄存器传输</h2>
+<p>!!! warning "说明"
+    把 transfer 翻译为“传输”是我脑瓜一拍的行为，我并不知道翻译成什么比较合适，如果读者有更好的翻译，请告诉我！</p>
+<p><strong>数字系统：</strong>
+一个复杂系统除了信息的存储还需要信息的传输和处理，换句话来说，为了实现灵活、复杂的计算，我们需要信息之间能够广泛地交互。大部分电子系统设计中，都会有一个 <strong>控制单元(Control Unit)</strong> 来负责指挥（决定指令的序列） <strong>数据通路(Datapath)</strong> 进行数据处理。</p>
+<blockquote>
+<p>Datapaths are defined by their registers and the operations performed on binary data stored in the registers.</p>
+<p><img alt="Alt text" src="image.png" /></p>
+</blockquote>
+<p>数据通路由一组寄存器以及对寄存器中所存储的二进制数的操作所定义</p>
+<p>对于寄存器自身而言，它可能实现 载入(load)、清空(clear)、移位(shift)（关于这里的shift的含义我存疑） 和 计数(count) 等。此外，对于那些寄存器中的数据进行移动和处理，被称为 <strong>寄存器传输操作(Register Transfer Operations)</strong>，它们主要包含这三个部分：</p>
+<ol>
+<li>系统中的寄存器集合；</li>
+<li>对于寄存器中存储数据的操作；</li>
+<li>系统中操作执行顺序的控制；</li>
+</ol>
+<p>一个寄存器可以完成一个或多个<strong>基本操作(elementary operation)</strong>，比如加载、计数、加法、减法和移位。
+例如，右移寄存器是一个能把数据往右移位的寄存器。计数器是一个每次加一的寄存器。<code>触发器是一个能置位或清零的一位寄存器</code>。==事实上，根据定义，任何时序电路的触发器和其相关联的门电路都能叫作寄存器==</p>
+<p>其中，最基础的那部分操作被称为 <strong>微操作(microoperation)</strong>，它们是实现复杂操作的基础，例如将 R1 的数据载入 R2，将 R1 和 R2 相加，或是自增 R1 等。它们通常以比特向量为载体并行实现的。</p>
+<p>!!! warning "Note that:"</p>
+<pre><code>&lt;img alt="![Alt text](image-1.png).png" src="img/![Alt%20text](image-1.png).png"&gt;
+</code></pre>
+<p>本章介绍寄存器、寄存器的实现和寄存器传输，使用一种简单的<strong>寄存器传输语言(RTL)</strong>来描述寄存器并定义对寄存器存储内容进行的操作。这种语言使用一组表达式和类似HDL及其他编程语言的语句进行描述，它能简单地定义部分或全部复杂数字系统，比如一台计算机。这种定义能作为一个系统更加详细的设计基础。</p>
+<hr />
+<h3 id="_5">寄存器传输操作 &amp; 寄存器传输语言</h3>
+<p>对于简单的时序逻辑系统，我们可以使用状态机等方式来描述它们的行为，但是对与规模更大的系统来说，这是一件很痛苦的事情。所以我们引入了一种专注于行为逻辑的语言来描述寄存器传输中的逻辑行为：<strong>寄存器传输语言(Register Transfer Language)RTL</strong>。</p>
+<p>通常具有特殊功能的寄存器都会用其名称缩写大写表示，例如 AR(Address Register)，PC(Program Counter)，IR(Instruction Register) 或者更普通的 R2(Register 2)。</p>
+<p>n位寄存器中的<strong>单个触发器</strong>通常从0到n-1进行编号从最低位0位(通常是最右的一位)向最高位递增。由于0位在右端，因此这种编号方式称为<strong>小端(little-endian)</strong>格式存储。反之，0位位于最左端，则称为<strong>大端(big-endian)</strong>格式存储。</p>
+<blockquote>
+<p>reg [31:0] a; // 32位寄存器a,每一位代表一个触发器</p>
+<p><a href="https://www.geeksforgeeks.org/little-and-big-endian-mystery/">Little-endian &amp; Big-endian</a></p>
+</blockquote>
+<p>我们有时候也会用这些形式来图形化的表示寄存器：</p>
+<p><img alt="" src="../img/99.png" /></p>
+<p>此外，常见操作用 RTL 表示方法和符号如下：</p>
+<p><img alt="" src="../img/100.png" /></p>
+<p>逗号代表同时进行</p>
+<p>!!! warning "warning"
+    寄存器后面的位是用<strong>小括号</strong>，区分RTL与verilog</p>
+<p>==背==
+<img alt="" src="../img/98.png" /></p>
+<blockquote>
+<p>concatenation:一系列相关的事情？</p>
+</blockquote>
+<p>需要额外说明的是，如果我们想表达条件语句，例如我们想表达：</p>
+<p>$$
+if\, (K_1 = 1) \,then\, (R2 \leftarrow R1)
+$$</p>
+<p>则可以写为：</p>
+<p>$$
+K_1 : R2 \leftarrow R1
+$$</p>
+<p><img alt="20240106145657.png" src="img/Chap06/20240106145657.png">  </p>
+<p>我们注意到在寄存器传输语句中并没有将时钟作为一个变量，这是由于我们假设所有的传输操作都出现在时钟发生跳变的情况下。尽管控制条件K1 在t时刻就已被激活，但实际的传输操作是在触发器被下一个上升沿触发时(时刻t+1)才发生的。</p>
+<hr />
+<h2 id="_6">寄存器传输的实现</h2>
+<p>!!! info "引入"
+    如何实现寄存器所存储的数据之间的处理与交互是本章节的核心命题。如果说 <strong><a href="#微操作及其实现">微操作</a></strong> 处理的是数据之间的处理，那 <strong><a href="#寄存器传输">寄存器传输</a></strong> 则着眼于数据之间的交互。</p>
+<pre><code>换句话来说，如何把数据给到别的寄存器、如何获取别的寄存器给到的数据、如何传输和选择这些数据，就是本小节要解决的问题。
+
+特别的，寄存器传输的实现可以直接实现 **[转移](#转移)** 操作。
+</code></pre>
+<h3 id="mux">基于 MUX 实现传输</h3>
+<p>对于一个单一寄存器，它的 <strong>输入</strong> 可能有多种来源，例如其它寄存器，又或者是其他操作的结果。总而言之，它的输入很可能是不唯一的，而同一时刻我们只能接受一个来源的输入。因此，我们需要使用 <code>MUX</code> 来对输入进行选择。</p>
+<p>一个简单 🌰 如下：</p>
+<p><img alt="" src="../img/106.png" /></p>
+<p>用语言来描述这个总体架构就是，我们通过一系列 one-hot 编码（不确定，也许可能都为零？我感觉取决于 <strong><a href="#保持">保持</a></strong> 的实现。）来表示选择哪个输入源（下图中 $K_0\sim K_{n-1}$），再通过 <code>Encoder</code> 将它们编码作为 <code>MUX</code> 的输入选择信号（下图中 $S_m \sim S_0$），从多个输入源（下图中 $0 \sim k \sim (n-1)$）中选择对应的源，并输出，给到 R0；此外，将选择信号都或起来，作为 R0 的 Load 信号输入。</p>
+<p><img alt="" src="../img/105.png" /></p>
+<blockquote>
+<p>其中 <code>MUX</code> 的 $k \sim (n-1)$ 实现了 <strong><a href="#转移">转移</a></strong> 操作。</p>
+</blockquote>
+<p>!!! summary "小结"</p>
+<pre><code>换句话来说，`MUX` 实现主要的实现了 **多对一** 的数据传输问题。如果我们单单使用 `MUX` 来完成寄存器之间的数据交互（假设所有寄存器都能相互传输数据），那将这个模型（图例在[下一小节](#基于总线实现传输)）抽象后，我们得到的将是一张“**[完全图](https://zh.wikipedia.org/zh-cn/%E5%AE%8C%E5%85%A8%E5%9C%96)**”，然而它肉眼可见的开销大。
+
+而总线则非常巧妙地优化了这个问题（并不是上位替代关系）。
+</code></pre>
+<hr />
+<h3 id="_7">基于总线实现传输</h3>
+<p>在<a href="#基于-mux-实现传输">上一小节</a>的小结中我们已经提到了 <code>MUX</code> 实现的优劣，也提到了 <strong>总线(bus)</strong> 传输的优势，那么它具体来说其实现方法有两种——通过共有 <code>MUX</code> 实现，或通过三态门实现。</p>
+<h4 id="mux_1">共有 MUX 实现</h4>
+<p>让我们以三个寄存器的模型为例，对比通过专有 <code>MUX</code> 实现和通过 <strong>单一总线(single bus)</strong> 实现的区别：</p>
+<p><img alt="" src="../img/107.png" /></p>
+<p>首先对总线实现进行说明，同样是使用 <code>MUX</code>，但此时 <code>MUX</code> 不再是某个寄存器的 <strong>专有逻辑(dedicated logic)</strong>，而是三个寄存器共同使用的 <strong>共有逻辑(shared logic)</strong>。总线中的 <code>MUX</code> 在所有寄存器的输入中选择其中一个，并将它输出，给到所有寄存器；而总线通过控制 Load 信号来选择让哪个（或哪些）寄存器得到这个信号。</p>
+<p>接下来进行对比，以总线实现为主体，与 <code>MUX</code> 实现对比：</p>
+<ul>
+<li>优势：<ul>
+<li>电路更精简，成本更低，随着寄存器增加这个特点更加明显；</li>
+</ul>
+</li>
+<li>劣势：<ul>
+<li>同一时刻内总线只能传输一个数据，即只有一个数据源(source)；<ul>
+<li>同一时钟周期内只有一个数据能传输到别的地方，例如交换操作就需要至少两个 bus 才能实现；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>而因为这些特点，我们需要评估我们的需求，选择合适的结构来实现。</p>
+<hr />
+<h4 id="_8">三态门实现</h4>
+<p>三态门的相关内容已经在前面介绍，<a href="../Chap02/#三态门">传输门</a>，关于本小节的知识，可以重点关注 <strong><a href="../Chap02/#三态门">#三态门/碎碎念</a></strong>。</p>
+<p>而关于总线的实现，引用一句我在 <strong><a href="../Chap02/#三态门">#三态门/碎碎念</a></strong> 里写的话：</p>
+<blockquote>
+<p>只要我们让导线的若干输入中只有一个三态门不在「高阻态」，就能够优雅地实现多路输出互联。</p>
+</blockquote>
+<p>实际上，所谓的三态门实现原理上和 <code>MUX</code> 实现无二，只不过我们是通过三态门来实现「路由」这个逻辑而已，也就是书上所说的：</p>
+<blockquote>
+<p>Three-state buffer outputs can be connected together to form a multiplexed output line.</p>
+</blockquote>
+<p>与 <code>MUX</code> 实现相对比，三态门实现方式如下：</p>
+<p><img alt="" src="../img/108.png" /></p>
+<p>进行简单说明，(c) 中对三态门的表示进行了简化，含义参考 (a)。它想表达的主要含义是，当 <code>EN</code> 为 <code>1</code> 时，表示输出；反之表示输入（当然，真正决定是否读入寄存器的还是 <code>LD</code>）。</p>
+<p>??? question "个人疑惑"
+    书中的表述是：</p>
+<pre><code>&gt; If the three-state buffers are enabled, then the lines are outputs; if the three-state buffers are disabled, then the lines can be inputs.
+
+但是看 \(a) 的表达，不管 `EN` 是什么，它应当都有输入才对，真正决定是否输入进来的应该还是 `LD`？
+</code></pre>
+<p>对比来看，三态门的实现大大降低了总线的实现成本，精简了电路的实现，所以通常来说更常用。</p>
+<p>??? note "个人想法"
+    虽然书中说三态门的接线比 <code>MUX</code> 的少了一半，但我觉的三态门只是把线分岔的地方移动到了寄存器附近，换句话来说不如说是节省了导线的长度。但是随着输入的增加，<code>MUX</code> 的结构会越来越复杂且需要重新设计，但三态门只需要量的增加就行了，所以确实是更加吸引人。（当然，虽然书中没说，但是我觉得 Enable 必须 at most one-hot，而这部分的逻辑对于两个实现方法来说是一样的）</p>
+<hr />
+<h2 id="_9">微操作及其实现</h2>
+<blockquote>
+<p>A microoperation is an elementary operation performed on data stored in registers or in memory.
+对寄存器存储数据执行的<strong>基本操作</strong>称作<strong>微操作</strong></p>
+</blockquote>
+<p>微操作一般分为这四种：</p>
+<p>1.传输微操作，transfer microoperations，将数据从一个寄存器转移到另外一个寄存器；
+2. 算术微操作，arithmetic microoperations，对寄存器中的数据的算术运算操作；
+3. 逻辑微操作，logic microoperations，对寄存器中的数据的逻辑<strong>位</strong>运算操作；
+4. 移位微操作，shift microoperations，对数据的移位操作；</p>
+<blockquote>
+<p>A given microoperation may be of more than one type. For example, a 1s complement operation is both an arithmetic microoperation and a logic microoperation.
+求反操作既是算术微操作也是逻辑微操作</p>
+</blockquote>
+<hr />
+<h3 id="_10">传输</h3>
+<p>不改变数据本身，只是从一个寄存器中把数据移动到另外一个寄存器。</p>
+<p>将 R1 中的数据转移到 R0 中，用 RTL 表示就是 $R0 \leftarrow R1$。</p>
+<p>这一部分的实现途径在 <strong><a href="#寄存器传输的实现">寄存器传输的实现</a></strong> 已经阐述。</p>
+<hr />
+<h3 id="_11">算术</h3>
+<p><img alt="" src="../img/101.png" /></p>
+<p>算术运算的实现可以通过 <strong><a href="#加减法器">加减法器</a></strong> 实现。
+==复习加减法器==</p>
+<blockquote>
+<p>Multiplication and division are not listed in Table 6-3. Multiplication can be represented by the symbol * and division by /. These two operations are not included in the basic set of arithmetic microoperations because they are assumed to be implemented by sequences of basic microoperations. However, multiplication can be considered as a microoperation if implemented by a combinational circuit. In such a case, the result is transferred into a destination register at the clock edge after all signals have propagated through the entire combinational circuit</p>
+</blockquote>
+<p>!!! example "加减法器"
+    就像我们之前学过的，用加法器实现加减法器，在 RTL 和模块逻辑电路的维度下，可以这么表示：</p>
+<pre><code>$$
+\begin{aligned}
+    &amp;\overline{X}K_1:R_1\leftarrow R_1 + R_2 \\
+    &amp;XK_1:R_1\leftarrow R_1 + \overline{R_2} + 1
+\end{aligned}
+$$
+
+![](img/102.png)
+
+&lt;img alt="20240106151026.png" src="img/Chap06/20240106151026.png"&gt;
+
+&lt;img alt="20240106151315.png" src="img/Chap06/20240106151315.png"&gt;
+</code></pre>
+<p>!!! warning "注意"
+    对于如上出现的形式如：$condition: reg \leftarrow options one regs$ 的表达式，<code>:</code> 左侧出现的 <code>+</code> 表示或，右侧的则表示加（“乘”也是这样）！</p>
+<p>相对应的，加减法的实现可以通过加减法器实现，乘法可以用 <strong><a href="#位移">位移</a></strong> 操作实现，而除法相对复杂。</p>
+<p>!!! note "乘法实现的<u>大致</u>思路"
+    假设我们需要计算 $a \cdot b$，且 $a$，$b$ 都是整数，则可以将 $b$ 写成二进制形式 $(b_{n-1}b_{n-2}...b_1b_0)_2$，于是：</p>
+<pre><code>$$
+\begin{aligned}
+    a \cdot b &amp;= a \cdot (b_{n-1}b_{n-2}...b_1b_0)_2 \\
+              &amp;= a \cdot \left[ (b_{n-1}0...00)_2 + \cdot (0b_{n-2}...00)_2 + ... + \cdot (00...b_10)_2 + \cdot(00...0b_0)_2 \right]\\
+              &amp;= a \cdot \sum_{i = 0} ^{n-1} b_i \cdot 2^{i} \\
+              &amp;= \left(a \cdot \sum_{i = 0} ^{n-1} b_i\right) \;\mathrm{&lt;&lt;}\; i \;\;\; \text{where "&lt;&lt;" means "Shift Left"}
+\end{aligned}
+$$
+
+于是就可以通过 **[位移](#位移)** 的相关知识来实现。
+</code></pre>
+<hr />
+<h3 id="_12">逻辑</h3>
+<p><img alt="" src="../img/103.png" /></p>
+<p>异或逻辑可以做到按位取反，并且是两个数相互作用</p>
+<p>逻辑运算的实现相比算术更加直接，因为大部分逻辑都可以通过逻辑门来实现。</p>
+<p>每一个门处理一位数据。n位寄存器的取反操作可以通过n个门实现</p>
+<hr />
+<p>!!! note "tips"
+    而承担逻辑和算术运算的硬件模块，一般被称为 <strong>ALU</strong>。</p>
+<hr />
+<h3 id="_13">位移</h3>
+<p><img alt="" src="../img/104.png" /></p>
+<p>位移的实现通过 <strong>位移寄存器(Shift Register)SHR</strong> 实现。
+具有单向或双向移动存储数据功能的寄存器称作<strong>移位寄存器</strong></p>
+<p>!!! info "引入"
+    位移操作从本质上来讲，是通过 <strong>触发器随着时钟脉冲，将串行数据一位一位地移动</strong> 实现的。但是如果读者尚未理解其实现原理，阅读以下内容刚开始可能会觉得有些莫名其妙，但是请先阅读 <strong><a href="#串行实现">串行实现</a></strong> 和 <strong><a href="#并行化">并行化</a></strong> 的内容，知道它们的行为后，可以先暂时跳过 <strong><a href="#双向位移寄存器">双向位移寄存器</a></strong>，再来看本节末尾的总结，也许能够让您明白它究竟是怎么实现的。</p>
+<h4 id="_14">串行实现</h4>
+<p>位移操作最简单的实现只需要与输入数相同位数的触发器实现。<strong>每一个触发器的输出连接下一触发器的输入</strong>，所有触发器使用相同的时钟脉冲输入来触发移位操作。 </p>
+<p>它的基本结构如下：</p>
+<p><img alt="" src="../img/109.png" /></p>
+<blockquote>
+<p>四个触发器首尾相连，最前面 <strong>串行输入(Serial Input)SI</strong> 数据，末端得到 <strong>串行输出(Serial Output)SO</strong>，在不同时钟周期的偏差下，连续读入的 n bits 即为不同位数位移的结果。</p>
+</blockquote>
+<p>!!! example "串行位移操作实现的模拟解释"
+    假设现在我们有 4 个 <code>FF</code> 首尾相连，现在串行输入 <code>1001</code> 这 4bits 的数据（当然，完全输入需要 4 个时钟周期）。</p>
+<pre><code>假设第 1 个周期结束后，`1001` 最右侧的 `1` 被存在了第一个 FF，则：
+
+|周期|待输入|FF1|FF2|FF3|FF4|SO|
+|:--:|--:|:--:|:--:|:--:|:--:|:--:|
+|1|`100`|`1`|?|?|?|`1???`|
+|2|`10`|`0`|`1`|?|?|`01??`|
+|3|`1`|`0`|`0`|`1`|?|`001?`|
+|4| |`1`|`0`|`0`|`1`|`1001`|
+|5| |?|`1`|`0`|`0`|`?100`|
+|6| |?|?|`1`|`0`|`??10`|
+|7| |?|?|?|`1`|`???1`|
+
+这里的 SO 指的是从当前轮次开始，读入 4bits 数据得到的串行输出结果，这里的 4bits 当然是对应输入的 4bits。
+
+可以发现，**在第四轮前后的结果分别是左移和右移的结果**，当然，如果是要考虑具有实际计算价值的位移，我们当然需要填充 `?` 的值，不过这都是小事情。
+</code></pre>
+<hr />
+<h4 id="_15">并行化（具有并行加载功能的移位寄存器）</h4>
+<blockquote>
+<p>如果一个移位寄存器的所有触发器输出都是可访问的，那么通过串行移位操作进入的信息就可以从触发器的输出端并行读出。
+如果一个移位寄存器具有并行加载功能，那么并行进人的数据同样能够串行地移位输出。因而，具有可访问的触发器输出以及并行加载功能的移位寄存器能够用于实现并行输入数据到串行输出数据的转换，反之亦然。</p>
+</blockquote>
+<p>!!! note 
+    并行化主要有两个方面，即 <strong>并行输出(parallel output)</strong> 和 <strong>并行载入(parallel load)</strong>，分别对应着 在同一个时间周期内 <strong>得到每一个 <code>FF</code> 的结果</strong> 和 <strong>对每一个 <code>FF</code> 载入数据</strong>。</p>
+<pre><code>**并行输出**的实现非常简单，只需要给每一个 `FF` 的输出引出一条线就行了，**它与串行输出可以直接同时存在**；而**并行输入则与串行输入冲突**，一次只能实现其中一个，所以需要一些控制电路：
+</code></pre>
+<p><img alt="" src="../img/110.png" /></p>
+<blockquote>
+<p>看起来有点复杂，但是实际上逻辑还是很清晰的。</p>
+<ul>
+<li>纵向观察右侧的四个 <code>FF</code>，可以发现基本上就是串行位移实现，只不过其输入不再是直接从上一个 <code>FF</code> 那边拿来的；</li>
+<li>四个 <code>FF</code> 的输入是类似的，所以我们仅关注最上面的那三个与门和一个或门，表示数据输入有三个可能的来源；<ol>
+<li>第一个与门，$F_i=Shift \cdot SI$（对于后面几个 <code>FF</code>，则是 $F_i=Shift \cdot FF_{i-1}$），可以发现，此时电路的行为与 <strong>串行位移实现</strong> 一致；<ul>
+<li>即 $Shift$ 为 <code>1</code> 时，<code>SHR</code> 表现为「<strong>每个周期执行一次位移</strong>」；</li>
+</ul>
+</li>
+<li>第二个与门，$F_i=\overline{Shift} \cdot Load \cdot D_i$，此时电路的行为是使用比特向量对每一个 <code>FF</code> 赋值，即 <strong>并行载入</strong>；<ul>
+<li>即 $\overline{Shift} \cdot Load$ 为 <code>1</code> 时，<code>SHR</code> 表现为「<strong>并行载入</strong>」；</li>
+</ul>
+</li>
+<li>第三个与门，$F_i=\overline{Shift} \cdot \overline{Load} \cdot Q_i$，此时电路的行为是保持上一周期的结果；<ul>
+<li>即 $\overline{Shift} \cdot \overline{Load}$ 为 <code>1</code> 时，<code>SHR</code> 表现为「<strong>保持</strong>」；</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p>总和来说，就是：</p>
+<p>$$
+\begin{aligned}
+      Shift :&amp; Q\leftarrow \mathrm{sl}\; Q \ <br />
+      \overline{Shift}\cdot Load :&amp; Q\leftarrow D \ <br />
+      \overline{Shift}\cdot \overline{Load} :&amp; Q\leftarrow Q
+\end{aligned}
+$$</p>
+<p><img alt="" src="../img/111.png" /></p>
+</blockquote>
+<p>注意：是左移，Q0是最低位</p>
+<p>!!! example "应用"
+    移位寄存器常用于连接两个距离较远的数字系统。例如，需要在两个结点之间传输n 位数据的情形。如果结点之间的距离过大，那么使用  条线并行地传输  位数据就显得太过昂贵了。相比之下，用一条线串行地一次一位传送n 位数据就要经济得多。发送方将n 位数据并行加载到一个移位寄存器中，通过一条公用的连线串行地将数据发送到接收方。接收方以申行方式将数据接收到一个移位寄存器中。当n 位数据全部接收完毕时，就可以并行地从该寄存器的输出端读出。<strong>因而，传送方实现了数据从并行到串行的转换，而接收方则完成数据从串行到并行的转换。</strong></p>
+<hr />
+<h4 id="_16">双向位移寄存器</h4>
+<p>上面介绍的位移寄存器随着时钟周期的供给，只能不可逆、单向地进行位移，这种位移寄存器称为 <strong>单向位移寄存器(Unidirectional SHR)</strong>；对应的，如果能够支持可控制的左移右移，则被称为 <strong>双向位移寄存器(Bidirectional SHR)</strong>。</p>
+<p>其行为如下：</p>
+<p>$$
+\begin{aligned}
+    \overline{S_0} \cdot \overline{S_1} :&amp; Q \leftarrow Q\
+    S_0 \cdot \overline{S_1} :&amp; Q\leftarrow\mathrm{Sl}\; Q \
+    \overline{S_0} \cdot S_1 :&amp; Q\leftarrow\mathrm{Sr}\; Q \
+    S_0 \cdot S_1:&amp; Q\leftarrow D
+\end{aligned}
+$$</p>
+<p>某一级单元实现如下：</p>
+<p><img alt="" src="../img/112.png" /></p>
+<blockquote>
+<p>其本质上就是添加了一个 <code>MUX</code> 来选择下一个时钟是继承 $(i+1)$、$(i-1)$、$D_i$ 还是 $Q$。</p>
+</blockquote>
+<p>图6-11b是图6-11a 中双向移位寄存器逻辑图对应的符号表示图。注意，必须为该电路提供左向串行输人信号(LSI)和右向串行输入信号(RSI)。如果要得到串行输出结果，则可以用$Q_3$作为左移操作的输出结果，而将$Q_0$用于右移操作的输出结果</p>
+<hr />
+<p>!!! note "综合阐述"
+    代码意义上的位移一般指的是一个双目操作，即可以指定位移多少位，这个参数被称为 <strong>位移量(Shift Amount)</strong>。</p>
+<pre><code>但在硬件层面的实现上，这个多少“位”只能通过循环和已经实现的、**有限种** 确定位移量的位移实现，在我们提到的实现中，指的就是我们硬件只实现「一位位移」，并通过循环实现「任意位位移」，而这个“循环”，就是在时钟周期下，`FF` 不断继承上一个 `FF` 的值来实现的。
+
+而并行与串行实现无非是体现这个特征的两种实现方法而已。
+
+!!!- tip "关于并行和串行"
+    这是一个题外话，我暂时不知道放哪里，刚好这里提到了就在这里说了。
+
+    实际上，虽然看起来并行的效率会比串行高很多，但是实际上很多高速传输设备或协议用的都是串行。这是因为，并行单次传输线路多，线路之间的距离小，干扰大，所以相对来说正常工作所下对频率的要求更高；而串行由于可以使用更高的频率工作，所以在某些情况下效率更高。
+</code></pre>
+<hr />
+<h2 id="_17">计数器</h2>
+<p>计数器(counter) 是什么，已经在 <strong><a href="#寄存器">#寄存器</a></strong> 中解释了，根据实现原理，主要分为 <strong>行波计数器(Ripple Counter)</strong> 和 <strong>同步计数器(Synchronous Counter)</strong> 两种。</p>
+<p>在输入时钟脉冲序列激励下<strong>遍历指定状态序列</strong>的寄存器称为计数器。
+遍历的状态序列可以用二进制序列（<strong>二进制计数器</strong>）或者其他序列（十进制计数器）表示。
+一个n位的二进制计数器由n个触发器组成，$0$~$2^{n-1}$</p>
+<p>！脉冲的间隔并不要求是固定值，只要是脉冲就行</p>
+<p>在行波计数器中，某些触发器输出值的跳变可以改变其他一些触发器中的值。也就是说，加载到某些触发器 C输人端的值不是公用的时钟脉冲，而是其他触发器的输出信号。而在同步计数器中，所有触发器的 C输人端都是加载的公用时钟脉冲，并且计数器下一状态的值取决于其当前所处的状态。</p>
+<hr />
+<h3 id="_18">行波计数器</h3>
+<p>行波计数器的主要思想就是将一个不断自反的 <code>FF</code> 的输出直接或间接作为下一个 <code>FF</code> 的时钟脉冲。由于形成一次脉冲需要一对 <code>0</code>&amp;<code>1</code>，所以前一个 <code>FF</code> 取反两次才能引起下一个 <code>FF</code> 取反一次，如果下一个 <code>FF</code> 是在上一个 <code>FF</code> 的输出从 <code>1</code> 变 <code>0</code> 时触发，那两个 <code>FF</code> 的变化刚好对应于二进制自增的进位规律：<code>(0,0)</code>，<code>(0,1)</code>，<code>(1,0)</code>，<code>(1,1)</code>，<code>0,0</code>，...</p>
+<p>于是，一个 4-Bit 行波计数器的逻辑图就如下：</p>
+<p><img alt="" src="../img/113.png" />{ width=200px }</p>
+<p>!!! note "关于正向计数和逆向计数"
+     - 上图中，下一个 <code>FF</code> 的时钟来自于上一个 <code>FF</code> 的输出取反，也就是对于==上升==沿触发的 <code>FF</code> 来说，下一个 <code>FF</code> 会在上一个 <code>FF</code> 的输出从 <code>1</code> 到 <code>0</code> 时自反，所以是 <strong>正向计时(Upward Counting)</strong>；</p>
+<pre><code> - 反之，如果下一个 `FF` 的时钟来自于上一个 `FF` 的直接输出，也就是对于上升沿触发的 `FF` 来说，下一个 `FF` 会在上一个 `FF` 的输出从 `0` 到 `1` 时自反，所以是**逆向输出(Downward Counting)**；
+</code></pre>
+<p><img alt="" src="../img/114.png" /></p>
+<p>可以发现，行波计数器的优点是电路简单，成本低；但是缺点也很明显，既然它与同步计数器相区分，就说明它不是同步电路，每一个 <code>FF</code> 都会有传播延时，<strong>随着计数范围增大，总传播延时也会增加</strong>，而为了让电路正常工作，<strong>时钟频率也要因此下降</strong>。</p>
+<p>由于这些，书上对行波计数器的评价是多数情况下行波加法器只会在低功耗电路中被采用。</p>
+<hr />
+<h3 id="_19">同步计数器</h3>
+<p>同步计数器从实现自增的原理上来说，和行波计数器也是类似的，同样是在上一个 <code>FF</code> 完成一次翻转的时候让下一个 <code>FF</code> 变化。只不过同步计数器不是控制时钟，而是控制「<code>FF</code> 内的值是否取反」来实现，而它是通过异或门来实现的。</p>
+<p>我们知道，$0 \;\mathrm{XOR}\; X = X$，而 $1 \;\mathrm{XOR}\; X = \overline{X}$。因此，我们可以控制 <code>XOR</code> 的某个输入是 <code>0</code> 还是 <code>1</code> 来实现取反还是保持的切换。</p>
+<blockquote>
+<p>不过需要区分的是，行波计数器是在上一个 <code>FF</code> 变化完才影响下一个的，所以是 <code>1</code> 变 <code>0</code> 时需要进位；而同步计数器的所有 <code>FF</code> 是一起变化的，所以只有在前面都是 <code>1</code> 时候，表示下一刻它们都要进位了，当前 <code>FF</code> 才进位。</p>
+<p>也就是说，行波计数器是建立在前一个 <code>FF</code> 的结果进行变化；而并行加法器是建立在上一刻所有关联 <code>FF</code> 的状态，对下一状态的预判。</p>
+</blockquote>
+<p>在这基础上，同步计数器的 <strong>自增器(incrementer)</strong> 有两种不同的实现方法：</p>
+<p><img alt="" src="../img/115.png" /></p>
+<blockquote>
+<p>(b) 的蓝色部分替换 (a) 的蓝框部分为第二种。两种分别为 <strong>门串行实现</strong> 和 <strong>门并行实现</strong>。</p>
+<p>两种实现其实原理都是一样的，只不过门串行牺牲某些情况下的运行效率，节约了门成本；而门并行提高x了门成本，减少了某些情况下的门延迟。</p>
+</blockquote>
+<p>根据是串行门控还是并行门控，我们可以将同步二进制计数器分为<strong>串行计数器</strong>和<strong>并行计数器</strong>。</p>
+<p>当然，既然使用的是自增器，那么实现的自然就是正向计数器。为了实现逆向计数器，我们则需要将自增器换为自减器。做法只不过是将异或门的控制信号取反。</p>
+<p>具体来说，输入函数变为：</p>
+<p>$$
+\begin{aligned}
+    D_{A0} = &amp; Q_0 \oplus EN \
+    D_{A1} = &amp; Q_1 \oplus \left(
+        (Q_0 \cdot \overline{S} + \overline{Q_0} \cdot S) \cdot EN
+    \right) \
+    D_{A2} = &amp; Q_2 \oplus \left(
+        (Q_0 \cdot Q_1 \cdot \overline{S} + \overline{Q_0} \cdot \overline{Q_1} \cdot S) \cdot EN
+    \right) \
+    D_{A3} = &amp; Q_3 \oplus \left(
+        (Q_0 \cdot Q_1 \cdot Q_2 \cdot \overline{S} + \overline{Q_0} \cdot \overline{Q_1} \cdot \overline{Q_2} \cdot S) \cdot EN
+    \right)
+\end{aligned}
+$$</p>
+<blockquote>
+<p>从这个表达式也可以略微感受到门串行和门并行的区别究竟在哪里，它们使用同一个表达式，只不过用不同的方式来实现多位 <code>AND</code> 运算。</p>
+</blockquote>
+<p>!!! question
+    并行加法器与减法器是什么</p>
+<hr />
+<h4 id="_20">同步载入（具有同步加载功能的同步计数器）</h4>
+<p>这里同步载入的含义可以同 <strong><a href="#并行化（具有并行加载功能的移位寄存器）">位移寄存器的并行载入</a></strong> 类比，其主要目的是将计数器的当前值设为一个我们需要的初始值。</p>
+<p>以门串行实现为例，添加功能控制逻辑后的设计如下：</p>
+<p><img alt="" src="../img/116.png" /></p>
+<p>前n个使能逻辑与输入Load相连，决定是否并行加载数据D
+另外n个使能逻辑与Loadn相连，Load为1的时候，锁存与技术都无法进行，而Load为0的时候恰好相反
+    Count = 1时，执行计数操作
+    Count = 0时，执行锁存操作</p>
+<p>!!! question
+    当为11的时候呢？
+    显然因为Loadn = 0，不执行技术操作，可以执行加载操作，
+    但是因为Count = 1，进位链处于活跃状态，CO会变成1；但是，计数器不处于执行状态的时候，进位链应当为0！</p>
+<p>!!! solution
+    在Count输人信号前加载一个$\overline{Load}$使能信号，当Load=1时，$\overline{Load}=0$，这将使Count信号无法加载到进位链中，也因此使得 CO输出为0。对于输人组合 11，计数器执行加载操作，对此我们称加载操作的优先级高于计数操作。对于由4位的计数器扩展成的4n位计数器，第一级的Count输入接入一个计数控制输入信号，而之后每一级的Count输人则是与上一级的CO输出相连。具有并行加载功能的计数器在数字计算机的设计中有着广泛的应用，在后面的章节中，我们将其作为具有并行加载功能和递增功能的寄存器来使用。</p>
+<hr />
+<h3 id="_21">任意计数序列</h3>
+<p>现在让我们回归计数器的行为：<u>随着时钟周期不断在固定的状态序列中循环</u>。也就是说，这个序列未必需要是整数自增自减序列。而实现某一序列的计数行为，实际上只要设计好有限状态和状态之间的转移即可。</p>
+<p>当然，这个话题太过宽泛，我们在这里具体讨论的还是整数自增序列，只不过限制了上下界。书上提供的案例是 BCD 码的循环计数，那我们也跟着这个案例来。</p>
+<hr />
+<h4 id="bcd">BCD 码循环计数</h4>
+<p>首先我们需要根据时序电路的设计规则，搞清楚状态序列，显然，根据 BCD 码的定义，我们可以毛毛地认为它是下确界为 <code>0</code>，上确界为 <code>9</code> 的 4 比特整数序列。换句话说，我们需要实现一个计数到 <code>9</code> 后下一个状态是 <code>0</code> 的 4 比特计数器。</p>
+<p>于是我们可以当计数器的输出为 <code>9</code> 时，下一周期让计数器载入 <code>0</code>：</p>
+<p><img alt="" src="../img/117.png" /></p>
+<blockquote>
+<p>按理来说这里应该是 $Load = Q_0\cdot\overline{Q_1}\cdot\overline{Q_2}\cdot Q_3$，以对应 <code>9D=1001B</code>，但是由于自增过程中，<code>1001</code> 是第一个满足 <code>1??1</code> 的组合，所以可以直接简化为 $Load = Q_0\cdot Q_3$。</p>
+</blockquote>
+<p>如上是修改上确界的方法，而修改下确界的方法则是修改 $D_i$ 序列，例如上图中 $D$ 接地，所以下确界是 <code>0000B</code>。</p>
+<p>!!! example "Mod N 计数器"
+    实际上，我们可以把 BCD 码循环计数器看作是特殊的 Mod N 计数器，即 N = 10 的 Mod N 计数器。</p>
+<pre><code>或许你会想，实现 Mod N 计数器能不能在满足输出条件后直接使用 `Clear` 输入。但是请不要忘记了，`Clear` 也好，`Set` 也罢，它们都是异步操作。我们没有必要也不应该使用异步操作，所以最好的做法还是使用 `Load`。
+</code></pre>
+<hr />
+<h2 id="_22">寄存器传输的控制</h2>
+<p>!!! error "未完成"</p>
+<p>Control Unit</p>
+<ul>
+<li>Programmable sys<ul>
+<li>instructions (usually stored in memory RAM/ROM)</li>
+<li>program counter</li>
+</ul>
+</li>
+<li>
+<p>Nonprogrammable sys</p>
+<ul>
+<li>focus on this</li>
+<li>State machine diagrams for Control Unit design.</li>
+</ul>
+</li>
+<li>
+<p>Write a detailed system specification.</p>
+</li>
+<li>Define all external data and control input signals, all external data, control, and status output signals, and the registers of the datapath and control unit.</li>
+<li>Find a state machine diagram for the system including the register transfers in the datapath and in the control unit.</li>
+<li>Define internal control and status signals. Use these signals to separate output conditions and actions, including register transfers, from the state diagram flow and represent them in tabular form.</li>
+<li>Draw a block diagram of the datapath including all control and status inputs and outputs. Draw a block diagram of the control unit if it includes register transfer hardware.</li>
+<li>Design any specialized register transfer logic in both the control and datapath.</li>
+<li>Design the control unit logic.</li>
+<li>Verify the correct operation of the combined datapath and control logic. If verification fails, debug the system and reverify it.</li>
+</ul>
+<p>重点看书上的例子。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>7月6日 集群软硬件以及运维基础 - 我的第一个站点</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">我的第一个站点</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ZJU CS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../" class="dropdown-item">ZJU CS 课程</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DigitalDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../DigitalDesign/" class="dropdown-item">[大二秋冬] 数字逻辑设计 | Digital Design</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap01/" class="dropdown-item">Chap 1 Digital Systems and Information</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap02/" class="dropdown-item">Chap 2 Combinational Logic Circuits</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap03/" class="dropdown-item">Chap 3 Combinational Logic Design</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap04/" class="dropdown-item">Chap 4 Sequential Circuits</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap05/" class="dropdown-item">Chap 5 Digital Hardware Implementation</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap06/" class="dropdown-item">Chap 6 Registers & Register Transfers</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/Chap07/" class="dropdown-item">Chap 7 Memory Basics</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/glossary/" class="dropdown-item">词汇表</a>
+</li>
+            
+<li>
+    <a href="../../../DigitalDesign/learnskill/" class="dropdown-item">学习思路以及资源</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Discrete math</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Discrete%20math/" class="dropdown-item">离散数学</a>
+</li>
+            
+<li>
+    <a href="../../../Discrete%20math/note/" class="dropdown-item">摘要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">FDS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../FDS/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/algorithm/" class="dropdown-item">算法分析</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/exam/" class="dropdown-item">历年卷</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/graph/" class="dropdown-item">图论</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/hash/" class="dropdown-item">散列（哈希）</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/heap/" class="dropdown-item">优先队列（堆）</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/homework/" class="dropdown-item">作业要点</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/set/" class="dropdown-item">并查集</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/sort/" class="dropdown-item">排序</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/tree/" class="dropdown-item">树</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/" class="dropdown-item">数组与链表</a>
+</li>
+            
+<li>
+    <a href="../../../FDS/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="dropdown-item">栈和队列</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">HPC</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">ZJUSCT</a>
+</li>
+            
+<li>
+    <a href="../../AIPP/" class="dropdown-item">并行计算设计导论</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Class</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">note of class</a>
+</li>
+            
+<li>
+    <a href="../L1/" class="dropdown-item">7月4日 计算机体系结构和高性能计算基础</a>
+</li>
+            
+<li>
+    <a href="../L2/" class="dropdown-item">7月5日 高性能计算方法论（HPC）</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">7月6日 集群软硬件以及运维基础</a>
+</li>
+            
+<li>
+    <a href="../L4/" class="dropdown-item">7月8日 向量化并行计算基础</a>
+</li>
+            
+<li>
+    <a href="../L5/" class="dropdown-item">7月9日 GPU (Graphic Processing Unit)</a>
+</li>
+            
+<li>
+    <a href="../L6/" class="dropdown-item">7月10日 OpenMP</a>
+</li>
+            
+<li>
+    <a href="../L7/" class="dropdown-item">7月11号 机器学习（Machine Learning)</a>
+</li>
+            
+<li>
+    <a href="../L8/" class="dropdown-item">高性能计算高级话术</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Homework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../homework/lab1/" class="dropdown-item">Lab-1</a>
+</li>
+            
+<li>
+    <a href="../../homework/lab2.5/" class="dropdown-item">Lab-2</a>
+</li>
+            
+<li>
+    <a href="../../homework/lab2/" class="dropdown-item">Lab2 向量化计算</a>
+</li>
+            
+<li>
+    <a href="../../homework/lab3/" class="dropdown-item">Lab-3 基于CUDA对GEMM的优化</a>
+</li>
+            
+<li>
+    <a href="../../homework/lab4/" class="dropdown-item">Lab-4 PCG算法在OMP和MPI下的优化</a>
+</li>
+            
+<li>
+    <a href="../../homework/lab5/" class="dropdown-item">Lab-5 AI相关</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../L2/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../L4/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#76" class="nav-link">7月6日 集群软硬件以及运维基础</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="76">7月6日 集群软硬件以及运维基础</h1>
+<div class="toc">
+<ul>
+<li><a href="#76">7月6日 集群软硬件以及运维基础</a><ul>
+<li><a href="#linux">Linux基础操作</a></li>
+<li><a href="#_1">集群</a></li>
+<li><a href="#_2">应用和功耗</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="linux">Linux基础操作</h3>
+<blockquote>
+<p>本讲有部分内容我放到/missing semester/Linux 中去了</p>
+</blockquote>
+<ol>
+<li>
+<p>学习建议：ChatGPT ；-- help； man</p>
+</li>
+<li>
+<p>Linux会有很多发行版，Ubuntu笔记容易上手，大多集群使用的是Debian。</p>
+</li>
+<li>
+<p>用户管理：<code>/etc/passwd</code>(用户名：密码表示：UID：GID组别：描述性内容：主目录：默认shell)</p>
+</li>
+</ol>
+<p>密码在<code>/etc/shadow</code></p>
+<ol>
+<li>
+<p><code>passwd [user]</code>(集群下如果开了NIS则要用<code>yppasswd</code>)</p>
+</li>
+<li>
+<p>文件系统</p>
+</li>
+</ol>
+<p><img alt="" src="../graph/Snipaste_2023-07-06_20-25-39.png" /></p>
+<blockquote>
+<p>注：/opt中会有一些可选的东西；/mnt一般用来挂在硬盘</p>
+</blockquote>
+<ol>
+<li><code>lsblk</code>用来显示分区 ; <code>df</code>可以看到磁盘使用情况</li>
+<li><code>mount</code>(need the su authority)</li>
+<li><code>umount -l(lazy) -f(forced)</code> </li>
+<li>git的使用！！！（智云课堂42：34左右开始）（可以下载git line插件）</li>
+<li><code>make &amp;&amp; make install</code></li>
+<li><code>ps</code>进程管理，<code>kill</code>杀死进程，<code>htop</code>在线监管</li>
+<li>终端分块：<code>tmux</code></li>
+</ol>
+<pre><code class="language-sh">$ tmux new -s &lt;name&gt;
+
+# 分离对话
+$ tmux detach 
+或者 ctrl+B 再按 D
+# 重新建立连接
+$ tmux attach -t &lt;name&gt; 
+# 使用会话名称
+$ tmux switch -t &lt;session-name&gt;
+# rename
+$ tmux rename-session -t 0 &lt;new-name&gt;
+
+拆成左右两边
+ctrl+B+%
+看所有section
+ctrl+S
+
+# 列出所有快捷键，及其对应的 Tmux 命令
+$ tmux list-keys
+# 列出所有 Tmux 命令及其参数
+$ tmux list-commands
+# 列出当前所有 Tmux 会话的信息
+$ tmux info
+# 重新加载当前的 Tmux 配置
+$ tmux source-file ~/.tmux.conf
+</code></pre>
+<ol>
+<li>ctrl+B 再按 '['就可以上下活动光标</li>
+<li>网络：会有端口</li>
+</ol>
+<pre><code class="language-sh">netstat -a   # 列出所有端口
+netstat -pt  # 显示所有PID和进程的名字
+iptables -L -n   # 查看端口是否开放
+</code></pre>
+<p><img alt="" src="../graph/Snipaste_2023-07-06_21-43-00.png" /></p>
+<blockquote>
+<p>NAS00 起到跳板机的作用</p>
+</blockquote>
+<ol>
+<li>传输文件可以通过<code>scp</code>或者<code>xftp/xshell</code></li>
+</ol>
+<h3 id="_1">集群</h3>
+<ol>
+<li>HPC集群，node节点</li>
+<li>服务器（主流高性能NVlink AI服务器；开放加速生态OAM AI服务器；高适应性PCLeAI服务器）</li>
+<li>FLOPS（每秒浮点运算次数）； Latency（延迟）； Bandwidth or throughout（吞吐量）</li>
+<li>PCLe(Peripheral Component Interconnect Express): 高速串行计算机扩展总线标准</li>
+<li>存储协议：SATA；NVMe</li>
+<li>M.2是一种接口</li>
+<li>NVLinke服务器是NVIDIA的显卡交互的通信协议</li>
+<li>IPMI（intelligentPlatform Management Interfere）智能平台管理接口</li>
+<li>BMC网络管理平台</li>
+<li>环境管理可以看看：environment Module</li>
+<li>Slurm集群管理和优化用</li>
+</ol>
+<blockquote>
+<ol>
+<li>sbatch:用于将作业提交到队列</li>
+<li>srun：直接再Slurm集群运行命令或者程序</li>
+<li>squeue：查看在队列中的作业</li>
+<li>sinfo：用于查看Slurm管理的节点和分区的情况</li>
+<li>Scancel：用于取消已经提交的作业</li>
+<li>Salloc：交互式作业请求资源</li>
+</ol>
+</blockquote>
+<ol>
+<li>NVIDIA和Intel都有相关HPC的套件</li>
+</ol>
+<h3 id="_2">应用和功耗</h3></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js"></script>
+        <script src="../../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>散列（哈希） - 我的第一个站点</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">我的第一个站点</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ZJU CS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">ZJU CS 课程</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DigitalDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../DigitalDesign/" class="dropdown-item">[大二秋冬] 数字逻辑设计 | Digital Design</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap01/" class="dropdown-item">Chap 1 Digital Systems and Information</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap02/" class="dropdown-item">Chap 2 Combinational Logic Circuits</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap03/" class="dropdown-item">Chap 3 Combinational Logic Design</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap04/" class="dropdown-item">Chap 4 Sequential Circuits</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap05/" class="dropdown-item">Chap 5 Digital Hardware Implementation</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap06/" class="dropdown-item">Chap 6 Registers & Register Transfers</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/Chap07/" class="dropdown-item">Chap 7 Memory Basics</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/glossary/" class="dropdown-item">词汇表</a>
+</li>
+            
+<li>
+    <a href="../../DigitalDesign/learnskill/" class="dropdown-item">学习思路以及资源</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Discrete math</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Discrete%20math/" class="dropdown-item">离散数学</a>
+</li>
+            
+<li>
+    <a href="../../Discrete%20math/note/" class="dropdown-item">摘要</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">FDS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../algorithm/" class="dropdown-item">算法分析</a>
+</li>
+            
+<li>
+    <a href="../exam/" class="dropdown-item">历年卷</a>
+</li>
+            
+<li>
+    <a href="../graph/" class="dropdown-item">图论</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">散列（哈希）</a>
+</li>
+            
+<li>
+    <a href="../heap/" class="dropdown-item">优先队列（堆）</a>
+</li>
+            
+<li>
+    <a href="../homework/" class="dropdown-item">作业要点</a>
+</li>
+            
+<li>
+    <a href="../set/" class="dropdown-item">并查集</a>
+</li>
+            
+<li>
+    <a href="../sort/" class="dropdown-item">排序</a>
+</li>
+            
+<li>
+    <a href="../tree/" class="dropdown-item">树</a>
+</li>
+            
+<li>
+    <a href="../%E6%95%B0%E7%BB%84%E4%B8%8E%E9%93%BE%E8%A1%A8/" class="dropdown-item">数组与链表</a>
+</li>
+            
+<li>
+    <a href="../%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="dropdown-item">栈和队列</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">HPC</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/" class="dropdown-item">ZJUSCT</a>
+</li>
+            
+<li>
+    <a href="../../HPC/AIPP/" class="dropdown-item">并行计算设计导论</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Class</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/class/" class="dropdown-item">note of class</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L1/" class="dropdown-item">7月4日 计算机体系结构和高性能计算基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L2/" class="dropdown-item">7月5日 高性能计算方法论（HPC）</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L3/" class="dropdown-item">7月6日 集群软硬件以及运维基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L4/" class="dropdown-item">7月8日 向量化并行计算基础</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L5/" class="dropdown-item">7月9日 GPU (Graphic Processing Unit)</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L6/" class="dropdown-item">7月10日 OpenMP</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L7/" class="dropdown-item">7月11号 机器学习（Machine Learning)</a>
+</li>
+            
+<li>
+    <a href="../../HPC/class/L8/" class="dropdown-item">高性能计算高级话术</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Homework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../HPC/homework/lab1/" class="dropdown-item">Lab-1</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab2.5/" class="dropdown-item">Lab-2</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab2/" class="dropdown-item">Lab2 向量化计算</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab3/" class="dropdown-item">Lab-3 基于CUDA对GEMM的优化</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab4/" class="dropdown-item">Lab-4 PCG算法在OMP和MPI下的优化</a>
+</li>
+            
+<li>
+    <a href="../../HPC/homework/lab5/" class="dropdown-item">Lab-5 AI相关</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../graph/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../heap/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">散列（哈希）</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">基本思想</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">散列函数</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#separate-chaining" class="nav-link">分离链接 （链式地址 separate chaining）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#open-addressing" class="nav-link">开放地址 Open Addressing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">再散列</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">散列（哈希）</h1>
+<h2 id="_2">基本思想</h2>
+<p>理想的散列表是一个含有关键字的具有固定大小的数组。</p>
+<p>ADT 模型</p>
+<ul>
+<li>对象：一组 名称-属性 对，其中名称是唯一的。</li>
+<li>操作<ul>
+<li>创建散列表</li>
+<li>查询关键字是否在散列表中</li>
+<li>查询关键字</li>
+<li>插入关键字</li>
+<li>删除关键字</li>
+</ul>
+</li>
+</ul>
+<p>对每个标识符 <code>x</code>, 我们定义了一个<strong>散列函数</strong> <br />
+<code>f(x)=</code>position of <code>x</code> in <code>ht[ ]</code> (<strong>i.e.</strong> the index of the bucket that contains <code>x</code>)  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212291922092.png" width = 50%/> </div>
+
+<p><strong>哈希过程就是将数组元素与下标建立关系的过程。</strong></p>
+<p>输入一个 key ，<strong>哈希函数的计算过程</strong>分为以下两步。</p>
+<ol>
+<li>通过某种哈希算法 hash() 计算得到哈希值。</li>
+<li>将哈希值对桶数量（数组长度）capacity 取模，从而获取该 key 对应的数组索引 index 。</li>
+</ol>
+<pre><code>index = hash(key) % capacity
+</code></pre>
+<p>随后，我们就可以利用 index 在哈希表中访问对应的桶，从而获取 value 。</p>
+<p>这里我们用 $T$ 表示 <code>x</code> 可能的不同值; $n$ 表示 <code>ht[]</code> 中所有不同标识符的个数; <strong>标识符密度</strong>定义为 <strong>$\dfrac{n}{T}$</strong>; <strong>装载密度</strong>$\lambda$定义为 $\dfrac{n}{sb}$ </p>
+<p>!!! example
+    设数组长度 capacity = 100、哈希算法 hash(key) = key ，易得哈希函数为 key % 100 。图 6-2 以 key 学号和 value 姓名为例，展示了哈希函数的工作原理。</p>
+<pre><code>&lt;img alt="20231228203631.png" src="img/hash/20231228203631.png"&gt;
+</code></pre>
+<ul>
+<li>当我们把两个不同的标识符映射到同一个桶里时，<strong>冲突</strong>发生了(<strong>i.e.</strong> $f(i_1)=f(i_2), i_1\neq i_2$)</li>
+<li>当我们将一个新的标识符映射到一个满的桶里时，<strong>溢出</strong>发生了  </li>
+</ul>
+<p>没有溢出时, $T_{search} = T_{insert} = T_{delete} = O( 1 )$</p>
+<p><img alt="20231226083817" src="https://imagebed-1321832893.cos.ap-shanghai.myqcloud.com/ImageBed/20231226083817.png" /></p>
+<h2 id="_3">散列函数</h2>
+<p>$f$ 要满足的性质：</p>
+<ul>
+<li>容易计算，最小化冲突的数量</li>
+<li>$f$ 应该是无偏见的，即 $\forall x,i$ 我们有 $P(f(x)=i)=\dfrac{1}{b}$. 这样的散列函数称为<strong>均匀散列函数</strong>.  </li>
+</ul>
+<p>TableSize 应该是一个<strong>素数</strong>，这样对随机输入，关键字的分布比较均匀<br />
+如 $f(x)=(\sum x[N-i-1]*32^i)\%TableSize$  </p>
+<hr />
+<p>下面介绍哈希冲突的解决方案</p>
+<hr />
+<h2 id="separate-chaining">分离链接 （链式地址 separate chaining）</h2>
+<p>解决冲突的第一种方法叫作分离链接法。其做法是将散列映射到同一个值的所有元素保存在一个列表中，一般使用链表的方式存储。</p>
+<ul>
+<li>
+<p>结构体定义
+    <details></p>
+<p><code>C
+struct  ListNode; 
+typedef  struct  ListNode  *Position; 
+struct  HashTbl; 
+typedef  struct  HashTbl  *HashTable; 
+struct  ListNode { 
+    ElementType  Element; 
+    Position  Next; 
+}; 
+typedef  Position  List; 
+/* List *TheList will be an array of lists, allocated later */ 
+/* The lists use headers (for simplicity), */ 
+/* though this wastes space */ 
+struct  HashTbl { 
+    int  TableSize; 
+    List  *TheLists; 
+};</code>
+<img alt="20231226085754" src="https://imagebed-1321832893.cos.ap-shanghai.myqcloud.com/ImageBed/20231226085754.png" /></p>
+<p>图中上面的蓝色部分代表Thelists[i]，下面的蓝色部分代表Next,黑色代表Struct ListNode
+</details></p>
+</li>
+<li>
+<p>创建空表
+    <details></p>
+<p><code>C
+HashTable  InitializeTable( int TableSize ) 
+{   HashTable  H; 
+    int  i; 
+    if ( TableSize &lt; MinTableSize ) { 
+        Error( "Table size too small" );  return NULL;  
+    } 
+    H = malloc( sizeof( struct HashTbl ) );  /* Allocate table */  //这个里面有一个int和一个指向List类型的指针
+    if ( H == NULL )    FatalError( "Out of space!!!" ); 
+    H-&gt;TableSize = NextPrime( TableSize );  /* Better be prime */
+    H-&gt;TheLists = malloc( sizeof( List ) * H-&gt;TableSize );  /*Array of lists*/ /*TheLists代表数组名称*/
+    if ( H-&gt;TheLists == NULL )   FatalError( "Out of space!!!" ); 
+    for( i = 0; i &lt; H-&gt;TableSize; i++ ) {   /* Allocate list headers */
+    H-&gt;TheLists[ i ] = malloc( sizeof( struct ListNode ) ); /* Slow! */
+    if ( H-&gt;TheLists[ i ] == NULL )  FatalError( "Out of space!!!" ); 
+    else    H-&gt;TheLists[ i ]-&gt;Next = NULL;
+    } 
+    return  H; 
+}</code>
+</details></p>
+</li>
+<li>
+<p>查询关键字
+    <details></p>
+<p>``` C
+Position  Find ( ElementType Key, HashTable H ) 
+{ 
+    Position P; 
+    List L; </p>
+<pre><code>L = H-&gt;TheLists[ Hash( Key, H-&gt;TableSize ) ]; //Your hash function
+
+P = L-&gt;Next; 
+while( P != NULL &amp;&amp; P-&gt;Element != Key )  /* Probably need strcmp */ 
+P = P-&gt;Next; 
+return P;
+</code></pre>
+<p>} 
+```
+</details></p>
+</li>
+<li>
+<p>插入关键字<br />
+    首先我们查找这个值，如果这个值已经存在那么我们就什么也不做。
+    <details></p>
+<p><code>C
+void  Insert ( ElementType Key, HashTable H ) 
+{ 
+    Position   Pos, NewCell; 
+    List  L; 
+    Pos = Find( Key, H ); 
+    if ( Pos == NULL ) {   /* Key is not found, then insert */
+    NewCell = malloc( sizeof( struct ListNode ) ); 
+    if ( NewCell == NULL )     FatalError( "Out of space!!!" ); 
+    else { 
+        L = H-&gt;TheLists[ Hash( Key, H-&gt;TableSize ) ]; //前面已经find过了，这里又做一次hash，有点浪费
+        NewCell-&gt;Next = L-&gt;Next; 
+        NewCell-&gt;Element = Key; /* Probably need strcpy! */ 
+        L-&gt;Next = NewCell; 
+        /*头插法*/
+    } 
+    } 
+}</code></p>
+</details>
+</li>
+</ul>
+<p>链式地址不受$\lambda$的影响，但是开放寻址会</p>
+<h2 id="open-addressing">开放地址 Open Addressing</h2>
+<p>开放地址法，当有冲突发生时，尝试选择其他的单元，直到找到空的单元为止。<br />
+一般地, $h_0(X),h_1(X),\ldots,$ 其中 $h_i(X)=(Hash(X)+F(i)) mod\ TableSize $<br />
+一般来说 $\lambda&lt;0.5$  (loading density)</p>
+<pre><code class="language-C">Algorithm: insert key into an array of hash table
+{
+    index = hash(key);
+    initialize i = 0 ------ the counter of probing;
+    while ( collision at index ) {
+    index = ( hash(key) + f(i) ) % TableSize;
+    if ( table is full )    break;
+    else    i ++;
+    }
+    if ( table is full )
+    ERROR (“No space left”);
+    else
+    insert key at index;
+}
+</code></pre>
+<p>f(i) is called the <strong>collision resolution function</strong>.</p>
+<h3 id="_4">线性探测法</h3>
+<p>在线性探测法中，函数 $F$ 是 $i$ 的线性函数，典型情形是 $F(i)=i$. 这相当于逐个探测单元（必要时可以绕回到第一个单元）以查找出一个空单元。</p>
+<p><img alt="20231226091221" src="https://imagebed-1321832893.cos.ap-shanghai.myqcloud.com/ImageBed/20231226091221.png" /></p>
+<p>可以证明，使用线性探测的探测次数对于插入和不成功的查找来说约为 $\dfrac{1}{2}(1+\dfrac{1}{(1-\lambda)^2})$ 次; 对于成功的查找来说则需 $\dfrac{1}{2}(1+\dfrac{1}{1-\lambda})$ 次</p>
+<h3 id="_5">平方探测法</h3>
+<p>平方探测法是消除线性探测中 <strong>一次聚集问题(primary clustering)</strong> 的冲突解决方法。冲突函数为二次函数，一般为 $F(i)=i^2$  </p>
+<blockquote>
+<p>定理: 如果使用平方探测，且表的大小是素数，那么当表至少有一半为空时，总能插入一个新的元素。</p>
+</blockquote>
+<p>对于任意元素 $x$, 它有 $\lceil TableSize/2 \rceil$ 个不同的位置可能放置这个元素。如果最多 $\lfloor TableSize/2 \rfloor $ 位置被使用，那么总能找到放 $x$ 的空单元。</p>
+<ul>
+<li>
+<p>查找元素<br />
+    $F(i)=F(i-1)+i^2-(i-1)^2=F(i-1)+2i-1$<br />
+    这里 <code>while</code> 语句的测试顺序不能改变。如果是 <code>empty</code>，则 <code>key</code> 没有定义，先判断会出错。<br />
+    假设探测步数 i 不超过 $\dfrac{TS}{2}+1$ 步，即假设表 $&lt;50\%$。这时 <code>CurrentPos+2i-1 &lt;= 2TS-1</code>，所以可以用减法。</p>
+<details>
+<p><code>C
+Position  Find ( ElementType Key, HashTable H ) 
+{   Position  CurrentPos; 
+    int  CollisionNum; 
+    CollisionNum = 0; 
+    CurrentPos = Hash( Key, H-&gt;TableSize ); 
+    while( H-&gt;TheCells[ CurrentPos ].Info != Empty &amp;&amp; 
+    H-&gt;TheCells[ CurrentPos ].Element != Key ) { 
+    CurrentPos += 2 * ++CollisionNum  1; 
+    if ( CurrentPos &gt;= H-&gt;TableSize )  CurrentPos  = H-&gt;TableSize; 
+    } 
+    return CurrentPos; 
+}</code>
+</details></p>
+</li>
+<li>
+<p>插入元素
+    <details></p>
+<p><code>C
+void  Insert ( ElementType Key, HashTable H ) 
+{ 
+    Position  Pos; 
+    Pos = Find( Key, H ); 
+    if ( H-&gt;TheCells[ Pos ].Info != Legitimate ) { /* OK to insert here */ 
+    H-&gt;TheCells[ Pos ].Info = Legitimate; 
+    H-&gt;TheCells[ Pos ].Element = Key; /* Probably need strcpy */ 
+    } 
+}</code>
+</details></p>
+</li>
+</ul>
+<p>散列到同一位置上的那些元素将探测相同的备选单元，这称为<strong>二次聚集</strong>。</p>
+<h3 id="_6">双散列</h3>
+<p>$f(i)=i*hash_2(X)$  我们在 $X$ 距离 $hash_2(X),2hash_2(X),\ldots$ 等位置进行探测。 常用 $hash_2(X)=R-(X mod R)$, 其中 $R$ 是一个比 $TableSize$ 小的素数。</p>
+<ul>
+<li>如果正确实现了双重哈希，模拟表明预期的探测数量几乎与随机冲突解决策略相同。</li>
+<li>平方探测不需要使用第二个哈希函数，因此在实践中可能更简单、更快。</li>
+</ul>
+<h2 id="_7">再散列</h2>
+<p>对于使用平方探测的开放地址散列法，如果表的元素过多，那么操作的运行时间将开始消耗过长。  </p>
+<ul>
+<li>建立一个两倍大的表</li>
+<li>扫描原始散列表</li>
+<li>利用新的散列函数将元素映射到新的散列值，并插入</li>
+</ul>
+<p>$T(N)=O(N)$  </p>
+<p>什么时候再散列？</p>
+<ul>
+<li>表填满一半就再散列</li>
+<li>当插入失败时</li>
+<li>当表达到某一个装填因子时进行再散列。  </li>
+</ul>
+<p>通常在重哈希之前应该有 $N/2$ 个插入，所以 $O(N)$ 重哈希只会给每个插入增加一个恒定的代价。<br />
+然而，在交互式系统中，不幸的用户的插入导致重新散列，可能会看到速度减慢。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

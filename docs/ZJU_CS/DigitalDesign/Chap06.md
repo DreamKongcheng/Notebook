@@ -94,7 +94,7 @@
 > Datapaths are defined by their registers and the operations performed on binary data stored in the registers.
 >
 > 
-![Alt text](image.png)
+
 
 数据通路由一组寄存器以及对寄存器中所存储的二进制数的操作所定义
 
@@ -109,9 +109,7 @@
 
 其中，最基础的那部分操作被称为 **微操作(microoperation)**，它们是实现复杂操作的基础，例如将 R1 的数据载入 R2，将 R1 和 R2 相加，或是自增 R1 等。它们通常以比特向量为载体并行实现的。
 
-!!! warning "Note that:"
 
-    <img alt="![Alt text](image-1.png).png" src="img/![Alt%20text](image-1.png).png">  
 
 本章介绍寄存器、寄存器的实现和寄存器传输，使用一种简单的**寄存器传输语言(RTL)**来描述寄存器并定义对寄存器存储内容进行的操作。这种语言使用一组表达式和类似HDL及其他编程语言的语句进行描述，它能简单地定义部分或全部复杂数字系统，比如一台计算机。这种定义能作为一个系统更加详细的设计基础。
 

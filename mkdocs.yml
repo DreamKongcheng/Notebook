@@ -1,1 +1,131 @@
-site_name: 我的第一个站点
+site_name: DreamKongcheng's notebook
+site_url: https://dreamkongcheng.github.io/Notebook/
+site_author: DreamKongcheng
+
+repo_url: https://github.com/DreamKongcheng/Notebook
+repo_name: DreamKongcheng/Notebook
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    # - navigation.sections
+    - navigation.prune
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    #　- navigation.expand
+    - navigation.tracking
+    - navigation.top
+    - header.autohide
+    - search.highlight
+    - search.share
+    - search.suggest
+    # - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+    - material.extensions.emoji.twemoji
+
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.inlinehilite
+  - pymdownx.smartsymbols  #智能符号
+  # - pymdownx.superfences: # 可在列表等处嵌入块
+  #     # make exceptions to highlighting of code:
+  #     custom_fences:
+  #         - name: mermaid
+  #           class: mermaid
+  #           format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - meta # 支持markdown博客文件头的元数据，比如标题
+  - toc:
+      permalink: "#"
+      baselevel: 1
+      separator: "_"
+  - attr_list 
+  - pymdownx.highlight: # 支持代码块语法高亮，！！！跟mermaid冲突
+  # - linenums: true # 显示行号
+
+
+nav:
+  - Home: index.md
+  - ZJU_CS: 
+    - ZJU_CS/index.md
+    - FDS:
+      - ZJU_CS\FDS\index.md
+      - ZJU_CS\FDS\algorithm.md
+      - ZJU_CS\FDS\exam.md
+      - ZJU_CS\FDS\graph.md
+      - ZJU_CS\FDS\hash.md
+      - ZJU_CS\FDS\heap.md
+      - ZJU_CS\FDS\homework.md
+      - ZJU_CS\FDS\set.md
+      - ZJU_CS\FDS\sort.md
+      - ZJU_CS\FDS\tree.md
+      - ZJU_CS\FDS\数组与链表.md        
+      - ZJU_CS\FDS\栈和队列.md
+    - Discrete math:
+      - ZJU_CS\Discrete math\index.md
+      - ZJU_CS\Discrete math\note.md
+    - Digital desin:
+      - ZJU_CS\DigitalDesign\index.md
+      - ZJU_CS\DigitalDesign\Chap01.md
+      - ZJU_CS\DigitalDesign\Chap02.md
+      - ZJU_CS\DigitalDesign\Chap03.md
+      - ZJU_CS\DigitalDesign\Chap04.md
+      - ZJU_CS\DigitalDesign\Chap05.md
+      - ZJU_CS\DigitalDesign\Chap06.md
+      - ZJU_CS\DigitalDesign\Chap07.md
+      - ZJU_CS\DigitalDesign\glossary.md
+      - ZJU_CS\DigitalDesign\learnskill.md
+
+

@@ -10,7 +10,7 @@
 ## 使用流的原因
 我们使用流的其中一个原因就是我们希望我们的程序能与外部的设备进行交互：当我们编写程序时，不是所有我们想使用的信息都包含在程序代码内的（self-contained）。
 图里是我们经常会用到的一些外部设备：
-<div align=center><img alt=" " src="img/Lec01_Streams/20240124120310.png" width = 90%/></div>  
+<img alt=" " src="img/Lec01_Streams/20240124120310.png" width = 90%/>
 
 控制台、键盘、文件这里不赘述。
 这里提一下other programs：程序/进程之间传输数据，比如常用的IPC方式就是管道pipelines（注：pipelines实现的方式之一就是输入输出重定向）
@@ -29,7 +29,7 @@
 1. 如何从外部源中以字符串的形式读取数据
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124120909.png" width = 80%/></div>  
 
-2. 如何把字符串再转换成我们需要的类型
+1. 如何把字符串再转换成我们需要的类型
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124120919.png" width = 80%/></div>  
 
 stream库做的事情就是把第一个问题进行了封装，你使用流的时候不需要考虑是怎么从外部读进来的，可以把stream看成一个buffer，它会自动从外部读取数据，你只需要关注如何把字符串转换成你需要的类型就好了

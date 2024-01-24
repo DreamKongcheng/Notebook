@@ -1,21 +1,8 @@
-# Welcome to MkDocs
+# Welcome to DreamKongcheng's Notebook!
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## 简介
+这是我的个人笔记，主要记录一些学习过程中的笔记，包括但不限于课程笔记、书籍笔记、论文笔记等等。
 
-## Commands
+感谢每一位浙大学长同学、优秀的笔记网站作者对我的指导，我会不断完善这个笔记本，希望能够帮助到更多的人。
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
-!!! note
-    666
 

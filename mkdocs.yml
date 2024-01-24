@@ -127,5 +127,12 @@ nav:
       - ZJU_CS\DigitalDesign\Chap07.md
       - ZJU_CS\DigitalDesign\glossary.md
       - ZJU_CS\DigitalDesign\learnskill.md
+  - Online_Courses:
+    - Online_Courses\CS106L\Lec00_welcome.md
+    - Online_Courses\CS106L\Lec01_Streams.md
 
+
+    
+  - Missing_Semester:
+    - Missing_Semester\markdown的引用路径自动更新.md
 

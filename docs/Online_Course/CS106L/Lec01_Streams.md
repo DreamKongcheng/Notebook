@@ -103,6 +103,11 @@ oss<< "(pack of " << 12 << ")\n"; //是不是很像c
 ```
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124130531.png" width = 90%/></div>  
 
+
+
+
+
+
 ### Standard iostreams
 
 - `cin`: Standard input stream(buffered)
@@ -117,7 +122,6 @@ oss<< "(pack of " << 12 << ")\n"; //是不是很像c
 - Can only send data using the `<<` operator.
 - Converts data of any type into **string** and sends it to the stream.
 - std::cout is the output stream that goes to the **console.**
-
 {{< admonition example>}}
 ```cpp
 std::cout << 5 << std::endl;

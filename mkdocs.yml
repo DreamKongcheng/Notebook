@@ -95,44 +95,52 @@ markdown_extensions:
   - pymdownx.highlight: # 支持代码块语法高亮，！！！跟mermaid冲突
   # - linenums: true # 显示行号
 
-
+# plugins:
+#   #- changelog
+#   - search:
+#       lang: zh
+#   - git-revision-date-localized:
+#       type: datetime
+#       timezone: Asia/Shanghai
+#       locale: zh
+#       enable_creation_date: true
 nav:
   - Home: index.md
   - ZJU_CS: 
     - ZJU_CS/index.md
     - FDS:
-      - ZJU_CS\FDS\index.md
-      - ZJU_CS\FDS\algorithm.md
-      - ZJU_CS\FDS\exam.md
-      - ZJU_CS\FDS\graph.md
-      - ZJU_CS\FDS\hash.md
-      - ZJU_CS\FDS\heap.md
-      - ZJU_CS\FDS\homework.md
-      - ZJU_CS\FDS\set.md
-      - ZJU_CS\FDS\sort.md
-      - ZJU_CS\FDS\tree.md
-      - ZJU_CS\FDS\数组与链表.md        
-      - ZJU_CS\FDS\栈和队列.md
+      - ZJU_CS/FDS/index.md
+      - ZJU_CS/FDS/algorithm.md
+      - ZJU_CS/FDS/exam.md
+      - ZJU_CS/FDS/graph.md
+      - ZJU_CS/FDS/hash.md
+      - ZJU_CS/FDS/heap.md
+      - ZJU_CS/FDS/homework.md
+      - ZJU_CS/FDS/set.md
+      - ZJU_CS/FDS/sort.md
+      - ZJU_CS/FDS/tree.md
+      - ZJU_CS/FDS/数组与链表.md        
+      - ZJU_CS/FDS/栈和队列.md
     - Discrete math:
-      - ZJU_CS\Discrete math\index.md
-      - ZJU_CS\Discrete math\note.md
+      - ZJU_CS/Discrete math/index.md
+      - ZJU_CS/Discrete math/note.md
     - Digital desin:
-      - ZJU_CS\DigitalDesign\index.md
-      - ZJU_CS\DigitalDesign\Chap01.md
-      - ZJU_CS\DigitalDesign\Chap02.md
-      - ZJU_CS\DigitalDesign\Chap03.md
-      - ZJU_CS\DigitalDesign\Chap04.md
-      - ZJU_CS\DigitalDesign\Chap05.md
-      - ZJU_CS\DigitalDesign\Chap06.md
-      - ZJU_CS\DigitalDesign\Chap07.md
-      - ZJU_CS\DigitalDesign\glossary.md
-      - ZJU_CS\DigitalDesign\learnskill.md
+      - ZJU_CS/DigitalDesign/index.md
+      - ZJU_CS/DigitalDesign/Chap01.md
+      - ZJU_CS/DigitalDesign/Chap02.md
+      - ZJU_CS/DigitalDesign/Chap03.md
+      - ZJU_CS/DigitalDesign/Chap04.md
+      - ZJU_CS/DigitalDesign/Chap05.md
+      - ZJU_CS/DigitalDesign/Chap06.md
+      - ZJU_CS/DigitalDesign/Chap07.md
+      - ZJU_CS/DigitalDesign/glossary.md
+      - ZJU_CS/DigitalDesign/learnskill.md
   - Online_Courses:
-    - Online_Courses\CS106L\Lec00_welcome.md
-    - Online_Courses\CS106L\Lec01_Streams.md
+    - Online_Courses/CS106L/Lec00_welcome.md
+    - Online_Courses/CS106L/Lec01_Streams.md
 
 
     
   - Missing_Semester:
-    - Missing_Semester\markdown的引用路径自动更新.md
+    - Missing_Semester/markdown的引用路径自动更新.md
 

@@ -796,14 +796,20 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#state_bits" class="md-nav__link">
     <span class="md-ellipsis">
       State bits
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="State bits">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#stdgetline" class="md-nav__link">
@@ -1052,14 +1058,20 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#state_bits" class="md-nav__link">
     <span class="md-ellipsis">
       State bits
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="State bits">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#stdgetline" class="md-nav__link">
@@ -1308,7 +1320,7 @@ cout &lt;&lt; &quot;hourlyWage : &quot; &lt;&lt; hourlyWage &lt;&lt; endl;
 </code></pre>
 <p>{{&lt; /admonition&gt;}}</p>
 <p>When we first input 2.17, the <code>2</code> is read and put into variable <code>age</code>, but the std::istream is still reading(not meet whitespace), and save <code>.17</code> in buffer, when the second <code>std::cin &gt;&gt;</code> called, write <code>.17</code> into variable <code>hourlyWage</code>. </p>
-<h3 id="state_bits">State bits<a class="headerlink" href="#state_bits" title="Permanent link">#</a></h3>
+<h2 id="state_bits">State bits<a class="headerlink" href="#state_bits" title="Permanent link">#</a></h2>
 <p>We can use state bits to check if the stream has errors.</p>
 <ul>
 <li><code>Good bit</code>: ready for read/write</li>
@@ -1321,6 +1333,19 @@ cout &lt;&lt; &quot;hourlyWage : &quot; &lt;&lt; hourlyWage &lt;&lt; endl;
 <li><code>EOF bit</code>: previous operation reached the end of buffer content</li>
 <li><code>Bad bit</code>: external error, likely irrecoverable</li>
 </ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>现在让我们利用istringstream实现一个将字符串转换成整数的函数，先写出第一版代码：
+<code>cpp
+int stringToInteger(const string&amp; str) {
+    istringstream iss(str);
+    int result;
+    iss &gt;&gt; result;
+    return result;
+}</code>
+这版代码的一个很明显的问题就是他没有错误检查，我们不清楚iss &gt;&gt; result;这行语句是否成功执行了，如果输入的字符串为Foo，那result里的值就是未初始化的垃圾值，我们的预期结果应该是该函数无法成功执行，抛出异常。</p>
+</div>
+<p>888</p>
 <p>{{&lt; admonition example&gt;}}</p>
 <pre><code class="language-cpp">std::istringstream iss(str);
 cout &lt;&lt; iss.good() &lt;&lt; endl;

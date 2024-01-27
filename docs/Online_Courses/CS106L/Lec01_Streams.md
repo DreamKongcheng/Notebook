@@ -312,6 +312,8 @@ How to use std::getline()
     - `>>` reads up to the next whitespace character and **does not go past that whitespace character.**
     - `getline` reads up to the next delimiter (by default, '\n'), and **does go past that delimiter.**
 
+![](img/Lec01_Streams/20240127193124.png)
+
 ### File Streams
 
 #### Output File Streams

@@ -182,7 +182,7 @@ cout << "hourlyWage : " << hourlyWage << endl;
 
 When we first input 2.17, the `2` is read and put into variable `age`, but the std::istream is still reading(not meet whitespace), and save `.17` in buffer, when the second `std::cin >>` called, write `.17` into variable `hourlyWage`. 
 
-### State bits
+## State bits
 
 We can use state bits to check if the stream has errors.
 
@@ -193,6 +193,27 @@ We can use state bits to check if the stream has errors.
 	- seekg failed
 - `EOF bit`: previous operation reached the end of buffer content
 - `Bad bit`: external error, likely irrecoverable
+
+
+!!! example
+    现在让我们利用istringstream实现一个将字符串转换成整数的函数，先写出第一版代码：
+    ```cpp
+    int stringToInteger(const string& str) {
+        istringstream iss(str);
+        int result;
+        iss >> result;
+        return result;
+    }
+    ```
+    这版代码的一个很明显的问题就是他没有错误检查，我们不清楚iss >> result;这行语句是否成功执行了，如果输入的字符串为Foo，那result里的值就是未初始化的垃圾值，我们的预期结果应该是该函数无法成功执行，抛出异常。
+
+
+
+
+
+888
+
+
 
 {{< admonition example>}}
 ```cpp

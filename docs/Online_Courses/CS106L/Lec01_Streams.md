@@ -10,6 +10,7 @@
 ## 使用流的原因
 我们使用流的其中一个原因就是我们希望我们的程序能与外部的设备进行交互：当我们编写程序时，不是所有我们想使用的信息都包含在程序代码内的（self-contained）。
 图里是我们经常会用到的一些外部设备：
+
 <img alt=" " src="img/Lec01_Streams/20240124120310.png" width = 90%/>
 
 控制台、键盘、文件这里不赘述。
@@ -22,14 +23,18 @@
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124120518.png" width = 90%/></div>  
 
 还有字符串到对象/结构体的转换：
+
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124120539.png" width = 90%/></div>  
+
 这里的关键点就是你在把一些变量、数据结构传输到控制台前，需要将其转换为字符串
 有两个难点：
 
 1. 如何从外部源中以字符串的形式读取数据
+
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124120909.png" width = 80%/></div>  
 
-1. 如何把字符串再转换成我们需要的类型
+2. 如何把字符串再转换成我们需要的类型
+
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124120919.png" width = 80%/></div>  
 
 stream库做的事情就是把第一个问题进行了封装，你使用流的时候不需要考虑是怎么从外部读进来的，可以把stream看成一个buffer，它会自动从外部读取数据，你只需要关注如何把字符串转换成你需要的类型就好了
@@ -38,6 +43,7 @@ cout的时候，不需要考虑如何与console交互
 
 ## Stream的分类
 每种流都是有一个输入流一个输出流的
+
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124121507.png" width = 90%/></div>  
 
 输出流：向buffer中插入数据 `stream <<`
@@ -45,6 +51,7 @@ cout的时候，不需要考虑如何与console交互
 
 ## stringstream
 A stringstream is **not** connected to any external source.
+
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124115932.png" width = 90%/></div>  
 
 这是件好事，因为我们可以只专注于类型转换是如何做的
@@ -65,6 +72,7 @@ int main(){
 
 ```
 常用的方法是`str()`，这个方法会获取oss中的整个数组然后将其转换成字符串
+
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124122254.png" width = 90%/></div>  
 
 - 编译指令
@@ -82,11 +90,13 @@ oss << 16.9 << " Ounce";
 cout << oss.str() << endl;
 //(注意这里的" Ounce"并不是string类的对象，它实际上是一个C string)
 ```
+
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124122627.png" width = 90%/></div>  
 
 - 原因解释：
 创建一个ostringstream的时候，指针从**起始位置**开始移动，会覆盖掉之前初始化的内容
 如果继续往里面写入东西，指针就从当前位置开始往后
+
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124125608.png" width = 70%/></div>  
 
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124125718.png" width = 90%/></div>  
@@ -95,12 +105,14 @@ cout << oss.str() << endl;
 
 `ostringstream oss("Ito En Green Tea",ostringstream::ate)`: `ate`指at end，流打开时就会指向最后面，此时的输出为：
 （注：另一个常见的参数是：`stringstream::binary`，表示字符串流为二进制模式）
+
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124130000.png" width = 90%/></div>  
 
 - 继续写
 ```cpp
 oss<< "(pack of " << 12 << ")\n"; //是不是很像c
 ```
+
 <div align=center><img alt=" " src="img/Lec01_Streams/20240124130531.png" width = 90%/></div>  
 
 
@@ -197,6 +209,7 @@ We can use state bits to check if the stream has errors.
 
 !!! example
     现在让我们利用istringstream实现一个将字符串转换成整数的函数，先写出第一版代码：
+
     ```cpp
     int stringToInteger(const string& str) {
         istringstream iss(str);
@@ -207,15 +220,37 @@ We can use state bits to check if the stream has errors.
     ```
     这版代码的一个很明显的问题就是他没有错误检查，我们不清楚iss >> result;这行语句是否成功执行了，如果输入的字符串为Foo，那result里的值就是未初始化的垃圾值，我们的预期结果应该是该函数无法成功执行，抛出异常。
 
+我们需要一种方式来检查流的状态:当前流是否课正常读写？类型转换是否成功？
+有四个状态位来表示流的状态。
+
+- Good bit: 可以正常读/写
+- Fail bit: 上一次对流进行的操作（previous operation）失败了，后续的操作全部中止/冻结（frozen）
+- EOF bit: 上一次对流的操作到达buffer的末尾，the end of buffer content
+- Bad bit: 当前流发生了可能无法恢复的错误
+这里面需要注意的一点是：流状态为后面三个任何一种时，后续的操作都会被中止（frozen）,也就是说：
 
 
+```cpp
+    istringstream iss("Foo");
+    int result;
+    string bar;
+    iss >> result;
+
+    iss >> bar; // <- 这个语句不会执行
+```
+
+由于iss >> result;这个语句执行后导致fail bit为on，导致后面对流的后续操作的iss >> bar;不会执行，无论后面的语句是否能成功执行都不会执行。
+
+### 导致标志位开启的常见原因
+<div align=center><img alt=" " src="img/Lec01_Streams/20240127115219.png" width = 90%/></div>  
+
+我们可以让流从Fall bit和EOF bit状态恢复到Good bit，但很难从Bad bit恢复到Good bit
 
 
-888
+<div align=center><img alt=" " src="img/Lec01_Streams/20240127115519.png" width = 90%/></div>  
 
+Good bit是在 **其他三个标志位都为off** 的时候才会开启的标志位，因此他与其中任何一个都不是取反相等的关系。
 
-
-{{< admonition example>}}
 ```cpp
 std::istringstream iss(str);
 cout << iss.good() << endl;
@@ -223,7 +258,26 @@ cout << iss.fail() << endl;
 cout << iss.eof() << endl;
 cout << iss.bad() << endl;
 ```
-{{< /admonition>}}
+
+
+## cout and cin
+<div align=center><img alt=" " src="img/Lec01_Streams/20240127120231.png" width = 90%/></div>  
+
+<div align=center><img alt=" " src="img/Lec01_Streams/20240127120429.png" width = 90%/></div>  
+
+
+<div align=center><img alt=" " src="img/Lec01_Streams/20240127121204.png" width = 90%/></div>  
+
+这里会fail，因为在读完名字之后buffer里面还是有东西，于是不会让用户继续输入，而是直接把Wang当成age输入了
+
+<div align=center><img alt=" " src="img/Lec01_Streams/20240127121641.png" width = 90%/></div>  
+
+改进：使用getline(cin, name, '\n')
+getline会把前面的换行符读掉
+
+
+
+
 
 ### std::getline()
 
@@ -240,24 +294,23 @@ cout << iss.bad() << endl;
 		- Next char in **is** is **delim(default is \\n)**, extracts but does **not store delim**
 		- **str** max size is reached, sets **FAIL bit** (can be checked using `is.fail()`)
 
-{{< admonition warning>}}
-Notice getline(istream& stream, string& line) takes in both parameters by **reference**!
-{{< /admonition>}}
+!!! warning
+    Notice getline(istream& stream, string& line) takes in both parameters by **reference**!
+
 
 How to use std::getline()
 
-{{< admonition example>}}
-```cpp
-string line;
-std::getline(cin, line); // now line has changed
-std::cout << line << std::endl;
-```
-{{< /admonition>}}
+!!! example
 
-Compare `>>` with `geline`:
+    ```cpp
+    string line;
+    std::getline(cin, line); // now line has changed
+    std::cout << line << std::endl;
+    ```
 
-- `>>` reads up to the next whitespace character and **does not go past that whitespace character.**
-- `getline` reads up to the next delimiter (by default, '\n'), and **does go past that delimiter.**
+!!! note Compare `>>` with `getline`:
+    - `>>` reads up to the next whitespace character and **does not go past that whitespace character.**
+    - `getline` reads up to the next delimiter (by default, '\n'), and **does go past that delimiter.**
 
 ### File Streams
 
@@ -349,5 +402,3 @@ Student reverseJudgementCall(string judgement) {
 }
 ```
 {{< /admonition>}}
-
-<div align=center><img alt=" " src="img/Lec01_Streams/777.png" width = 90%/></div>  
